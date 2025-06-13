@@ -1,0 +1,7 @@
+<div>
+  <p>{{product.id}}</p>
+  <p>{{product.description}}</p>
+  <p>{{product.price}}</p>
+  <button class="button_add" (click)="addCart()">Agregar</button>
+</div>
+<a [routerLink]="['/carrito']" >Ir a carrito</a>
