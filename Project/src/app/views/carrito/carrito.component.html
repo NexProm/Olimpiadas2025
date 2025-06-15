@@ -1,15 +1,50 @@
-<div>
+<div class="carrito">
   <h1>Tu carrito</h1>
-  <p *ngFor="let cart of CartService.cart" class="product">
-    {{cart.description}}
-    {{cart.price}}
-    <button (click)="CartService.deleteCart(cart)">Borrar</button>
-    x{{cart.cant}}
-    ${{ cart.price * cart.cant }}
-  </p>
-    total: {{ CartService.total }}
-    <a [routerLink]="['']">
-      <button>Comprar</button>
-    </a>
 
+  <div class="tabla-header">
+    <span>Descripcion del producto</span>
+    <span>Precio</span>
+    <span>Cantidad</span>
+    <span>Subtotal</span>
+    <span>Acciones</span>
+  </div>
+
+  <div *ngFor="let cart of CartService.cart" class="tabla-item">
+    <span>{{ cart.description }}</span>
+    <span>${{ cart.price }}</span>
+    <span>x{{ cart.cant }}</span>
+    <span>${{ cart.price * cart.cant }}</span>
+    <button class="butt" (click)="CartService.deleteCart(cart)">Borrar</button>
+  </div>
+
+  <div class="total">
+    Total: ${{ CartService.total }}
+  </div>
+
+  <form class="pago-tarjeta">
+    <h2>Datos de tarjeta</h2>
+
+    <div class="campo">
+      <label>Nombre en la tarjeta</label>
+      <input type="text" required>
+    </div>
+
+    <div class="campo">
+      <label>Número de tarjeta</label>
+      <input type="text" maxlength="16" required>
+    </div>
+
+    <div class="fila">
+      <div class="campo">
+        <label>Fecha de vencimiento</label>
+        <input type="month" required>
+      </div>
+
+      <div class="campo">
+        <label>CVV</label>
+        <input type="text" maxlength="3" required>
+      </div>
+    </div>
+    <button type="submit"  class="butt">Pagar</button>
+  </form>
 </div>

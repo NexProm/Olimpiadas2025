@@ -1,0 +1,39 @@
+
+
+.producto {
+  display: grid;
+  grid-template-columns: 3fr 1fr auto;
+  align-items: center;
+  background-color: rgba(25, 0, 77);
+  border-radius: 12px;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  gap: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.descripcion {
+  font-size: 18px;
+}
+
+.precio {
+  font-weight: bold;
+  font-size: 18px;
+  text-align: right;
+}
+
+.btn-agregar {
+  background-color: rgb(40, 0, 121);
+  color: #000;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-agregar:hover {
+  background-color: rgb(69, 25, 159);
+}
+
