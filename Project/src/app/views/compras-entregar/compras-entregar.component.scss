@@ -1,0 +1,21 @@
+.container{
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 2rem auto;
+    max-width: 600px;
+    text-align: center;
+
+    button{
+        padding: 0.5rem 1rem;
+        background-color: #280079;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+
+        &:hover{
+            background-color: #45199f;
+        }
+    }
+}
