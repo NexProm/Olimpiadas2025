@@ -1,7 +1,55 @@
-<div>
-  <app-product *ngFor="let product of products" [data] ="product" (addToCart)="addCart($event)">
+<div class="forms">
+<form action="/buscar-paquetes" method="get">
+  <h2>Elige nuestros paquetes turísticos:</h2>
 
+  <div class="form-row">
+    <div class="form-group">
+      <label for="origen">Origen:</label>
+      <input type="text" id="origen" name="origen" placeholder="Ciudad de origen" required>
+    </div>
+
+    <div class="form-group">
+      <label for="fecha_salida">Fecha de salida:</label>
+      <input type="date" id="fecha_salida" name="fecha_salida" required>
+    </div>
+
+    <div class="form-group">
+      <label for="pasajeros">Cantidad de pasajeros:</label>
+      <input type="number" id="pasajeros" name="pasajeros" min="1" max="10" value="1" required>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label for="destino">Destino:</label>
+      <input type="text" id="destino" name="destino" placeholder="Ciudad destino" required>
+    </div>
+
+    <div class="form-group">
+      <label for="fecha_regreso">Fecha de regreso:</label>
+      <input type="date" id="fecha_regreso" name="fecha_regreso" required>
+    </div>
+
+    <div class="form-group">
+      <label for="tipo">Tipo de paquete:</label>
+      <select id="tipo" name="tipo" required>
+        <option value="">Seleccione...</option>
+        <option value="vuelo+hotel">Vuelo + Hotel</option>
+        <option value="vuelo+auto">Vuelo + Auto</option>
+        <option value="hotel">Solo Hotel</option>
+        <option value="crucero">Crucero</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <button type="submit">Comprar</button>
+  </div>
+</form>
+</div>
+<div>
+  <app-product *ngFor="let product of products" [data]="product" (addToCart)="addCart($event)">
   </app-product>
 </div>
-
-
+<img src="images/xd.webp" class="jose">
+<br>
