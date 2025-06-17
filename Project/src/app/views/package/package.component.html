@@ -1,0 +1,38 @@
+<div class="body">
+    <h1>Ofertas en Paquetes Turisticos ideales para ti</h1>
+
+</div>
+    <section class="carroza">
+        <button class="flecha izquierda" (click)="sliderscroll(-1)">←</button>
+        <div class="slider">
+            <div class="carrusel">
+                <div class="imagenes" *ngFor="let pack of paquetes">
+                    <img [src]="pack.img" [alt]="pack.titulo">
+                    <strong>{{ pack.titulo }}</strong>
+                    <p *ngFor="let desc of pack.descripcion">{{ desc }}</p>
+                    <p>Precio final por persona</p>
+                    <strong>{{ pack.precio }}</strong>
+                    <div class="estrellas">
+                        <span *ngFor="let rate of [1, 2, 3, 4, 5]"
+                            (click)="calificacionpaquete(pack, rate)"> 
+                            {{ rate <= pack.calificacion ? '★' : '☆' }}
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="flecha derecha" (click)="sliderscroll(+1)">→</button>
+    </section>
+
+    <section>
+            <div class="container1">
+
+            </div>
+            <div class="container2">
+
+            </div>
+    </section>
+
+
+
+

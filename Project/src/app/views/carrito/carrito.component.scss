@@ -28,4 +28,99 @@ p{
 .butt:hover {
     background-color: #555;
 }
+.carrito {
+  max-width: 900px;
+  margin: auto;
+  padding: 30px;
+  color: rgb(255, 255, 255);
+ 
+}
 
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.tabla-header, .tabla-item {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  padding: 15px 10px;
+  align-items: center;
+  
+}
+
+.tabla-header {
+  font-weight: bold;
+  border-bottom: 2px solid #fff;
+  background-color: rgba(25, 0, 77);
+}
+
+.tabla-item {
+  background-color: rgba(25, 0, 77, 0.2);
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.total {
+  text-align: right;
+  font-size: 20px;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.butt {
+  background-color: rgb(40, 0, 121);;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.butt:hover {
+  background-color: rgb(69, 25, 159);
+}
+
+.pago-tarjeta {
+  margin-top: 40px;
+  background-color: rgba(25, 0, 77);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.pago-tarjeta h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: white;
+}
+
+.pago-tarjeta .campo {
+  margin-bottom: 20px;
+}
+
+.pago-tarjeta label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.pago-tarjeta input {
+  width: 95%;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+}
+
+.fila {
+  display: flex;
+  gap: 20px;
+}
+
+.fila .campo {
+  flex: 1;
+}

@@ -8,6 +8,7 @@ import { FooterComponent } from "./views/footer/footer.component";
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, CommonModule, RouterModule, HeaderComponent, FooterComponent],
+import { PackageComponent } from './views/package/package.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
