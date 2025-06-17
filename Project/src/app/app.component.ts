@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { HomeComponent } from './views/home/home.component';
 import { CommonModule } from '@angular/common';
+import { PackageComponent } from './views/package/package.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,CommonModule, RouterModule],
+  imports: [RouterOutlet,CommonModule, RouterModule, HomeComponent, PackageComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
