@@ -1,11 +1,14 @@
+.banner{
+  width:100%;
+}
+
 form {
-  background-color: rgb(26, 0, 77);
+  background-color: rgb(255, 49, 49);
   border-radius: 10px;
   padding: 20px;
   width: 97%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   color: white;
-  font-family: sans-serif;
   box-sizing: border-box;
 }
 
@@ -62,7 +65,7 @@ select:focus {
 }
 
 button[type="submit"] {
-  background-color: rgb(40, 0, 121);
+  background-color: rgb(255, 85, 85);
   border: none;
   padding: 12px 20px;
   border-radius: 6px;
@@ -73,7 +76,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: rgb(69, 25, 159);
+  background-color: rgb(255, 141, 141);
 }
 
 a {
