@@ -3,12 +3,34 @@
     padding: 0;
     box-sizing: border-box;
 }
+h2{
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    img{
+      width: 20%;
+      height: 175px;
+    };
+}
+.text{
+    display: inline-block;
+    justify-content: space-around;
+}
+.imagen{
+    display: flex;
+    justify-content: center;
+}
 .carroza{
     display: flex;
     align-items: center;
     position: relative;
     width: 100%;
-    height: 60vh;
+    height: 70vh;
     box-sizing: border-box;
     padding: 1rem;
     overflow: hidden;
@@ -33,6 +55,7 @@
 }
 h1{
   margin-left: 20px;
+  margin-bottom: 10px;
 }
 .carroza h1 p{
     display: flex;
@@ -117,12 +140,15 @@ h1{
 p{
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 3;
+    font-size: small;
     font-style: normal;
     margin-left: 17px;
+    color: rgb(67, 66, 66);
 }
 strong{
   font-size: large;
+  font-family: "Montserrat", sans-serif;
+  color: black;
 }
 @media (max-width: 1024px) {
   .imagenes {

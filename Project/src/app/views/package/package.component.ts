@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
 })
 export class PackageComponent {
   Indexactual = 0;
-
+  
   paquetes = [
     {
     img: '/images/Brasil.jpg',
