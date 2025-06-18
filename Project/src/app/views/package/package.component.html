@@ -1,5 +1,5 @@
 <div class="body">
-    <h1>Ofertas en Paquetes Turisticos ideales para ti</h1>
+    <p>Ofertas en paquetes turisticos ideales para ti:</p>
 
 </div>
     <section class="carroza">
@@ -14,7 +14,7 @@
                     <strong>{{ pack.precio }}</strong>
                     <div class="estrellas">
                         <span *ngFor="let rate of [1, 2, 3, 4, 5]"
-                            (click)="calificacionpaquete(pack, rate)"> 
+                            (click)="calificacionpaquete(pack, rate)">
                             {{ rate <= pack.calificacion ? '★' : '☆' }}
                         </span>
                     </div>

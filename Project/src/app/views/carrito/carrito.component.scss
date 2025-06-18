@@ -9,6 +9,10 @@ p{
   margin-bottom: 15px;
 }
 
+.carrito-titulo {
+  color: black;
+}
+
 .carrito p {
     margin: 0;
     flex: 1;
@@ -33,7 +37,7 @@ p{
   margin: auto;
   padding: 30px;
   color: rgb(255, 255, 255);
- 
+
 }
 
 h1 {
@@ -48,17 +52,17 @@ h1 {
   gap: 10px;
   padding: 15px 10px;
   align-items: center;
-  
+
 }
 
 .tabla-header {
   font-weight: bold;
   border-bottom: 2px solid #fff;
-  background-color: rgba(25, 0, 77);
+  background-color: rgb(255, 49, 49);
 }
 
 .tabla-item {
-  background-color: rgba(25, 0, 77, 0.2);
+  background-color: rgb(255, 49, 49);
   border-radius: 8px;
   margin-bottom: 10px;
 }
@@ -71,7 +75,7 @@ h1 {
 }
 
 .butt {
-  background-color: rgb(40, 0, 121);;
+  background-color: rgb(255, 85, 85);
   color: white;
   border: none;
   padding: 8px 14px;
@@ -81,12 +85,12 @@ h1 {
 }
 
 .butt:hover {
-  background-color: rgb(69, 25, 159);
+  background-color: rgb(255, 141, 141);
 }
 
 .pago-tarjeta {
   margin-top: 40px;
-  background-color: rgba(25, 0, 77);
+  background-color: rgb(255, 49, 49);
   padding: 25px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -123,4 +127,8 @@ h1 {
 
 .fila .campo {
   flex: 1;
+}
+
+.total {
+  color: black;
 }

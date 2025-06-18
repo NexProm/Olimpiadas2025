@@ -1,5 +1,5 @@
 <div class="carrito">
-  <h1>Tu carrito</h1>
+  <h1 class="carrito-titulo">Tu carrito</h1>
   <p *ngFor="let cart of CartService.cart" class="product">
     {{cart.description}}
     {{cart.price}}
@@ -7,9 +7,7 @@
     x{{cart.cant}}
     ${{ cart.price * cart.cant }}
   </p>
-    total: {{ CartService.total }}
     <a [routerLink]="['']">
-      <button class="butt">Comprar</button>
     </a>
 
   <div class="tabla-header">
