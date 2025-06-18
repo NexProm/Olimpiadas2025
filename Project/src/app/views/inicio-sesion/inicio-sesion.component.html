@@ -1,0 +1,28 @@
+<div class="iniciar-sesion">
+    <h1>Bienvenido a EasyTravel</h1>
+    <h2>Iniciar sesion</h2>
+    <div class="form">
+        <form (ngSubmit)="validation()" [formGroup]="Form">
+            
+           
+            <div class="div_form">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" formControlName="email" class="input">
+            </div>
+            <div class="div_form">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" formControlName="password" class="input">
+            </div>
+            <div>
+                <button type="submit" id="button_form">Enviar</button>
+            </div>
+            <div class="links">
+                <h4><a href="/registro">Registrarse</a></h4>
+                <h4><a href="/recuperar-contrasena">¿Olvidaste tu contraseña?</a></h4>
+            </div>
+        </form>
+        
+    </div>
+
+
+</div>
