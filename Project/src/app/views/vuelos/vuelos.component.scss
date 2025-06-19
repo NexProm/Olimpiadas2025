@@ -301,15 +301,13 @@ strong{
 .toggle-switch input:checked::before {
   transform: translateX(20px);
 }
-.habitaciones-box {
+
+.pasajeros-box {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.habitacion-icon, .persona-icon {
-  font-size: 18px;
-}
 .search-button {
   background-color: red;
   color: white;
@@ -319,3 +317,4 @@ strong{
   font-size: 16px;
   cursor: pointer;
 }
+

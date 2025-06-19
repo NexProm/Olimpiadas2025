@@ -1,1 +1,46 @@
-<p>asistencia works!</p>
+<br>
+<div class="forms">
+  <form action="/buscar-asistencia" method="get">
+    <h2>Asistencias de viaje</h2>
+
+    <div class="form-row">
+      <!-- Destino -->
+      <div class="form-group icon-group">
+        <label for="destino">DESTINO</label>
+        <div class="input-icon select-icon">
+          <input type="text" id="destino" name="destino" value="Europa" readonly>
+          <span class="icono">▼</span>
+        </div>
+      </div>
+
+      <!-- Fechas -->
+      <div class="form-group icon-group">
+        <label for="partida">FECHAS</label>
+        <div class="fechas-container">
+          <div class="input-icon">
+            <span class="icono">📅</span>
+            <input type="text" id="partida" name="partida" placeholder="Partida">
+          </div>
+          <div class="input-icon">
+            <span class="icono">📅</span>
+            <input type="text" id="regreso" name="regreso" placeholder="Regreso">
+          </div>
+        </div>
+      </div>
+
+      <!-- Pasajeros -->
+      <div class="form-group icon-group">
+        <label for="pasajeros">PASAJEROS</label>
+        <div class="input-icon">
+          <span class="icono">👤</span>
+          <input type="number" id="pasajeros" name="pasajeros" value="1" min="1">
+        </div>
+      </div>
+
+      <!-- Botón -->
+      <div class="form-group">
+        <button type="submit" class="boton-buscar"><span class="icono">🔍</span> Buscar</button>
+      </div>
+    </div>
+  </form>
+</div>

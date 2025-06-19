@@ -1,0 +1,399 @@
+form {
+  background-color: rgb(255, 49, 49);
+  border-radius: 10px;
+  padding: 20px;
+  width: 97%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  color: white;
+  box-sizing: border-box;
+}
+
+.forms {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+}
+
+form h2 {
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  min-width: 250px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+  width: 95%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  box-shadow: 0 0 5px #aaa;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+button[type="submit"] {
+  background-color: rgb(255, 85, 85);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background-color: rgb(255, 141, 141);
+}
+
+a {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.body {
+  margin-left: 20px;
+  margin-top: 15px;
+}
+.carroza{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    box-sizing: border-box;
+    padding: 1rem;
+    overflow: hidden;
+    scrollbar-width: none;
+}
+.slider{
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 1rem 0;
+    width: 90%;
+    max-width: 100%;
+    transition: transform 0.4s ease-out;
+}
+.carrusel{
+    display: flex;
+    max-width: 100%;
+    transition: transform 0.4s ease-out;
+    gap: 20px;
+}
+h1{
+  margin-left: 20px;
+}
+.carroza h1 p{
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+}
+.imagenes{
+   flex-grow: 0;
+   flex-shrink: 0;
+   flex-basis: calc((100% - 60px) / 4);
+   box-sizing: border-box;
+   scroll-snap-align: start;
+   background-color: white;
+   max-width: 25%;
+   padding: 10px;
+   border-radius: 30px;
+   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+   text-align: center;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.imagenes img{
+    width: 100%;
+    height: 175px;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    object-fit: cover;
+}
+.imagenes:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+.imagenes:hover img {
+  transform: scale(1.05);
+}
+.imagenes:target{
+    outline: 3px solid purple;
+}
+.imagenes p{
+  margin-right: 20px;
+}
+.estrellas {
+    font-size: 30px;
+    color: gold;
+    cursor: pointer;
+
+    span {
+      margin: 0 5px;
+
+      &:hover {
+        color: orange;
+      }
+    }
+  }
+.flecha {
+  position: relative;
+  background-color: white;
+  color: #333;
+  border: 1px solid black;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.2s ease;
+  z-index: 2;
+}
+.flecha:hover {
+  background-color: #f1f1f1;
+  transform: scale(1.1);
+}
+.flecha.izquierda {
+  margin-left: 1rem;
+}
+
+.flecha.derecha {
+  margin-right: 1rem;
+}
+.slider::-webkit-scrollbar {
+  display: none;
+}
+p{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 3;
+    font-style: normal;
+    margin-left: 17px;
+}
+strong{
+  font-size: large;
+}
+@media (max-width: 1024px) {
+  .imagenes {
+    flex-basis: calc((100% - 30px) / 2);
+    max-width: 48%;
+  }
+
+  .flecha {
+    font-size: 1.2rem;
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+  .estrellas {
+    font-size: 24px;
+  }
+}
+@media (max-width: 768px) {
+  .imagenes {
+    flex-basis: 80%;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .carroza {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem 0.5rem;
+  }
+
+  .slider {
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .flecha {
+    display: none;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  p, strong {
+    font-size: 0.95rem;
+  }
+
+  .imagenes img {
+    height: 150px;
+  }
+
+  .estrellas {
+    font-size: 22px;
+  }
+}
+.formulario-busqueda {
+  background-color: #2a0066; /* tono violeta oscuro */
+  border-radius: 12px;
+  color: white;
+  padding: 25px;
+  width: 100%;
+  max-width: 1200px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.custom-field {
+  background-color: white;
+  color: black;
+  border-radius: 8px;
+  padding: 10px;
+  min-width: 250px;
+}
+
+.custom-field label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.icon-input {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 6px;
+  padding: 8px;
+}
+
+.icon-input input {
+  border: none;
+  outline: none;
+  font-size: 15px;
+  padding: 5px 10px;
+  width: 100%;
+}
+
+.icon {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.double-input {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.double-input .icon {
+  grid-column: 1 / span 2;
+}
+
+.custom-button {
+  display: flex;
+  align-items: flex-end;
+}
+
+.custom-button button {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.custom-button button:hover {
+  background-color: #cc0000;
+}
+
+.form-extra {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: white;
+}
+
+/* ícono dentro del input */
+.input-icon {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 6px;
+  padding: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.input-icon input {
+  border: none;
+  outline: none;
+  font-size: 15px;
+  width: 100%;
+  background: transparent;
+  padding-left: 10px;
+}
+
+.icono {
+  font-size: 18px;
+  color: #555;
+}
+
+/* grupo doble para fechas */
+.fechas-container {
+  display: flex;
+  gap: 10px;
+}
+
+/* botón circular rojo */
+.boton-buscar {
+  background-color: #e60000;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 20px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.boton-buscar:hover {
+  background-color: #cc0000;
+}

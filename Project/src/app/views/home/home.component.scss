@@ -1,5 +1,5 @@
-.banner{
-  width:100%;
+.banner {
+  width: 99%;
 }
 
 form {
@@ -266,5 +266,33 @@ strong{
   .estrellas {
     font-size: 22px;
   }
+}
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.hero-texto {
+  position: absolute;
+  top: 39%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-texto h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.hero-texto p {
+  font-size: 1.2rem;
 }
 

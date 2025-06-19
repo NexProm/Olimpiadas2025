@@ -1,48 +1,45 @@
-<div class="forms">
-<form action="/buscar-paquetes" method="get">
-  <h2>Alojamientos</h2>
+<br>
+<div class="forms"> 
+  <form action="/buscar-paquetes" method="get">
+    <h2>Alojamientos</h2>
 
-  <div class="form-row">
-    <div class="form-group">
-      <label for="origen">Origen:</label>
-      <input type="text" id="origen" name="origen" placeholder="Ciudad de origen" required>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="destino">Destino:</label>
+        <input type="text" id="destino" name="destino" placeholder="Ingresá una ciudad, alojamiento o punto de interés" required>
+      </div>
+
+      <div class="form-group">
+        <label for="fecha_salida">Fecha de entrada:</label>
+        <input type="date" id="fecha_salida" name="fecha_salida">
+      </div>
+
+      <div class="form-group">
+        <label for="fecha_regreso">Fecha de salida:</label>
+        <input type="date" id="fecha_regreso" name="fecha_regreso">
+      </div>
+
+      <div class="form-group">
+        <label for="habitaciones">Habitaciones:</label>
+        <div class="habitaciones-box">
+          <span class="habitacion-icon">🛏️</span>
+          <input type="number" id="habitaciones" name="habitaciones" min="1" max="10" value="1">
+          <span class="persona-icon">👤</span>
+          <input type="number" id="pasajeros" name="pasajeros" min="1" max="10" value="2">
+        </div>
+      </div>
     </div>
 
-    <div class="form-group">
-      <label for="fecha_salida">Fecha de salida:</label>
-      <input type="date" id="fecha_salida" name="fecha_salida" required>
+    <div class="form-row">
+      <label class="toggle-switch">
+        <input type="checkbox" id="sin_fecha">
+        <span class="slider"></span>
+        Todavía no he decidido la fecha
+      </label>
     </div>
 
-    <div class="form-group">
-      <label for="pasajeros">Cantidad de pasajeros:</label>
-      <input type="number" id="pasajeros" name="pasajeros" min="1" max="10" value="1" required>
+    <div class="form-actions">
+      <button type="submit" class="search-button">🔍 Buscar</button>
     </div>
-  </div>
-
-  <div class="form-row">
-    <div class="form-group">
-      <label for="destino">Destino:</label>
-      <input type="text" id="destino" name="destino" placeholder="Ciudad destino" required>
-    </div>
-
-    <div class="form-group">
-      <label for="fecha_regreso">Fecha de regreso:</label>
-      <input type="date" id="fecha_regreso" name="fecha_regreso" required>
-    </div>
-
-    <div class="form-group">
-      <label for="tipo">Tipo de paquete:</label>
-      <select id="tipo" name="tipo" required>
-        <option value="">Seleccione...</option>
-        <option value="vuelo+hotel">Vuelo + Hotel</option>
-        <option value="vuelo+auto">Vuelo + Auto</option>
-        <option value="hotel">Solo Hotel</option>
-        <option value="crucero">Crucero</option>
-      </select>
-    </div>
-  </div>
-  <div class="form-actions">
-    <button type="submit">Comprar</button>
-  </div>
-</form>
+  </form>
 </div>
