@@ -1,16 +1,10 @@
   <h2>PAQUETES MAS BUSCADOS</h2>
-  <section class ="text">
-        <div class="container">
-            <img src="/images/Playabrasil.jpg" alt="Brasil">
-            <img src="/images/Caribeplaya.jpg" alt="Caribeplaya">
-            <img src="/images/Caribeplaya.jpg" alt="Caribeplaya">
-            <img src="/images/Caribeplaya.jpg" alt="Caribeplaya">
+    <div class="container">
+        <div class="paquete" *ngFor="let text of buscados">
+            <img [src]="text.img" [alt]="text.des">
+            <strong>{{ text.des }}</strong>
         </div>
-        <strong>BRASIL</strong>
-        <strong>BRASIL</strong>
-        <strong>BRASIL</strong>
-        <strong>BRASIL</strong>
-  </section>
+    </div>
  
  
  <h1>Ofertas en Paquetes Turisticos ideales para ti</h1>
@@ -39,11 +33,17 @@
     </section>
 
     <section>
+         <h1>SPONSORS</h1>
             <div class="container1">
-
+                <img src="/images/anuncio-1.jpg" alt="coca cola">
+                <img src="/images/anuncio-2.jpg" alt="coca cola">
+                <img src="/images/anuncio-3.jpg" alt="futbol">
             </div>
-            <div class="container2">
-
+             <h1>SPONSORS+</h1>
+            <div class="container2">        
+                <img src="/images/anuncio-4.jpg" alt="futbol">
+                <img src="/images/anuncio-5.jpg" alt="futbol">
+                <img src="/images/anuncio-6.jpg" alt="futbol">
             </div>
     </section>
 
