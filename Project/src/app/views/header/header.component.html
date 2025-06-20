@@ -7,9 +7,18 @@
       <li><a href="/pedidos">Pedidos pendientes</a></li>
       <li><a href="/carrito">Carrito</a></li>
       <li><a href="/about">Acerca de</a></li>
-      <li><a href="/inicio-sesion">Login</a></li>
-      
-      
+      <li *ngIf="!usuario">
+        <a routerLink="/inicio-sesion">Login</a>
+      </li>
+      <li *ngIf="usuario" class="perfil" (click)="toggleMenu()">
+        <img src="images/perfil.png" alt="Perfil" width="24" height="24">
+        <span>{{ usuario.nombre }}</span>
+        <ul *ngIf="mostrarMenu" class="dropdown">
+          <li (click)="cerrarSesion()">Cerrar sesión</li>
+        </ul>
+      </li>
+
+
     </ul>
   </div>
   <div class="menu-servicios">

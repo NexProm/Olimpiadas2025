@@ -18,11 +18,17 @@ export class CartService {
       }
       else{
         product.cant = 1
+        if(typeof product.precio === 'string'){
+          product.price = this.parsePrecio(product.precio);
+        }
         this.cart.push(product)
       }
        this.calPrice()
        localStorage.setItem('products', JSON.stringify(this.cart))
 
+  }
+  private parsePrecio(precio: string): number {
+    return parseInt(precio.replace(/\D/g, ''), 10);
   }
   deleteCart(product:any){
     this.cart = this.cart.filter((z: any)=> z.id != product.id)

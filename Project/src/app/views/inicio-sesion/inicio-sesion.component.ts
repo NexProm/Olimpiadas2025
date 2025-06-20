@@ -1,8 +1,11 @@
+import { LoginService } from './../../services/login.service';
 import { Component, inject, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { FormService } from '../../services/form.service';
 import { CommonModule } from '@angular/common';
+import { LoginRequest } from '../../services/login.service';
+import { ClienteService } from '../../services/cliente.service';
 
 @Component({
   selector: 'app-inicio-sesion',
@@ -14,23 +17,31 @@ export class InicioSesionComponent implements OnInit {
   Form!: FormGroup
   form= new FormService();
   router = inject(Router)
-
+  clienteService = inject(ClienteService);
+  loginService = inject(LoginService)
   ngOnInit(): void {
     this.Form = new FormGroup({
-      name: new FormControl( "",[Validators.required, Validators.maxLength(20)]),
       email: new FormControl("", [Validators.required, Validators.maxLength(100), Validators.email]),
       password: new FormControl("", [Validators.required, Validators.minLength(8), Validators.maxLength(20)]),
     });
 
   }
-
-  validation() {
-
-    if(!this.Form.valid){
-      alert("Faltan datos para llenar");
+  inicioDeSesion(): void{
+    if(this.Form.invalid){
+      alert('Faltan campos por rellenar')
       return;
     }
+    const datos: LoginRequest = this.Form.value
 
-    this.router.navigate(['/gratitude']);
-
-} } 
+    this.loginService.login(datos).subscribe({
+      next: (res) =>{
+        alert(res.mensaje + ", " + res.nombre);
+        this.clienteService.setUsuario(res);
+        this.router.navigate(['/'])
+      },
+      error: (err) =>{
+        alert(err.error?.mensaje ||'Error al iniciar sesión' )
+      }
+    })
+  }
+ }

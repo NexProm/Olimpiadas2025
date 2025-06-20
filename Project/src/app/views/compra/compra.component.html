@@ -1,0 +1,38 @@
+<div class="compras">
+  <h3>Seleccioná un método de pago:</h3>
+
+  <select [(ngModel)]="metodoPago">
+    <option value="">-- Elegí una opción --</option>
+    <option value="mercado">Mercado Pago</option>
+    <option value="tarjeta">Tarjeta de crédito</option>
+  </select>
+
+  <div *ngIf="metodoPago === 'mercado'" class="qr-section">
+    <p>Escaneá el código para pagar:</p>
+    <img src="images/qr.png" alt="QR Mercado Pago" width="150" height="150">
+  </div>
+
+
+  <div *ngIf="metodoPago === 'tarjeta'" class="tarjeta">
+    <form class="pago-tarjeta">
+      <h2>Datos de tarjeta</h2>
+      <div class="campo">
+        <label>Nombre en la tarjeta</label>
+        <input type="text" required>
+      </div>
+      <div class="campo">
+         <label>Número de tarjeta</label>
+         <input type="text" maxlength="16" required>
+      </div>
+      <div class="campo">
+        <label>Fecha de vencimiento</label>
+        <input type="month" required>
+      </div>
+      <div class="campo">
+            <label>CVV</label>
+            <input type="text" maxlength="3" required>
+      </div>
+
+    </form>
+  </div>
+</div>

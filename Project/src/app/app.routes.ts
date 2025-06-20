@@ -4,6 +4,7 @@ import { CarritoComponent } from './views/carrito/carrito.component';
 import { PackageComponent } from './views/package/package.component';
 import { InicioSesionComponent } from './views/inicio-sesion/inicio-sesion.component';
 import { RegistroComponent } from './views/registro/registro.component';
+import { CompraComponent } from './views/compra/compra.component';
 import { AlojamientosComponent } from './views/alojamientos/alojamientos.component';
 import { VuelosComponent } from './views/vuelos/vuelos.component';
 import { AlquileresComponent } from './views/alquileres/alquileres.component';
@@ -17,11 +18,12 @@ export const routes: Routes = [
   { path: 'package', component: PackageComponent },
   { path: 'inicio-sesion', component: InicioSesionComponent },
   { path: 'registro', component: RegistroComponent },
+  { path: 'compra', component: CompraComponent },
   { path: 'alojamientos', component: AlojamientosComponent },
   { path: 'vuelos', component: VuelosComponent },
   { path: 'alquileres', component: AlquileresComponent },
   { path: 'autos', component: AutosComponent },
   { path: 'asistencia', component: AsistenciaComponent },
   { path: 'micros', component: MicrosComponent },
-  { path: '**', redirectTo: '', pathMatch: 'full' }
+  { path: '**', redirectTo: '', pathMatch: 'full' } 
 ];
