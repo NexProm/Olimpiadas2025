@@ -14,18 +14,18 @@ export class HomeComponent {
     products = [
       {
         id: 1,
-        description: "Paquete numero 1 de toda la tienda",
-        price: 500
+        titulo: "Disfrutá de una escapada inolvidable a San Carlos de Bariloche. Incluye 3 noches en hotel 3★ con desayuno, vista al lago y Wi-Fi gratuito. Ideal para parejas o familias que buscan naturaleza y tranquilidad. ",
+        price: 5000000
       },
       {
         id: 2,
-        description: "Paquete numero 2 de toda la tienda",
-        price: 1000
+        titulo: "Pasaje aéreo ida y vuelta en clase económica con equipaje de mano incluido. Salida desde Aeroparque Jorge Newbery con destino a Mendoza. Perfecto para una escapada de fin de semana a la tierra del vino.",
+        price: 786430
       },
       {
         id: 3,
-        description: "Paquete numero 3 de toda la tienda",
-        price: 100
+        titulo: "Paquete numero 3 de todaAuto categoría económica (Chevrolet Onix o similar) con kilometraje libre, seguro básico incluido y retiro en el aeropuerto de Córdoba. Ideal para recorrer las sierras con libertad y comodidad. la tienda",
+        price: 245900
       }
     ]
 

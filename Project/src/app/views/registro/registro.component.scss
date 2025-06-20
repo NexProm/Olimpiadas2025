@@ -3,7 +3,7 @@
     height: 100%;
     display: flex;
     justify-content: center;
-    
+
     flex-direction: column;
     margin: auto;
     align-items: center;
@@ -11,7 +11,7 @@
     .form{
         display: flex;
         justify-content: center;
-        
+
         width: 100% ;
     }
     .input{
@@ -45,6 +45,13 @@
             &:hover{
                 text-decoration: underline;
             }
-        }       
+        }
     }
+}
+.error small {
+  color: #ff4d4d;
+  font-size: 0.85rem;
+  margin-top: 3px;
+  display: block;
+  animation: fade 0.2s ease-in;
 }

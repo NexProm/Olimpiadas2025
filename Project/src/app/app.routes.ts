@@ -4,6 +4,7 @@ import { CarritoComponent } from './views/carrito/carrito.component';
 import { PackageComponent } from './views/package/package.component';
 import { InicioSesionComponent } from './views/inicio-sesion/inicio-sesion.component';
 import { RegistroComponent } from './views/registro/registro.component';
+import { CompraComponent } from './views/compra/compra.component';
 
 export const routes: Routes = [
   {
@@ -25,5 +26,9 @@ export const routes: Routes = [
   {
     path: 'registro',
     component: RegistroComponent
+  },
+  {
+    path: 'compra',
+    component: CompraComponent
   }
 ];

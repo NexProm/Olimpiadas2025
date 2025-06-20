@@ -97,3 +97,16 @@ a{
   justify-content: space-between;
   padding: 10px 20px;
 }
+
+.perfil{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.dropdown{
+  margin: auto;
+}
+

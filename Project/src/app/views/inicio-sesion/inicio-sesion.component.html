@@ -2,9 +2,9 @@
     <h1>Bienvenido a EasyTravel</h1>
     <h2>Iniciar sesion</h2>
     <div class="form">
-        <form (ngSubmit)="validation()" [formGroup]="Form">
-            
-           
+        <form (ngSubmit)="inicioDeSesion()" [formGroup]="Form">
+
+
             <div class="div_form">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" formControlName="email" class="input">
@@ -21,7 +21,7 @@
                 <h4><a href="/recuperar-contrasena">¿Olvidaste tu contraseña?</a></h4>
             </div>
         </form>
-        
+
     </div>
 
 

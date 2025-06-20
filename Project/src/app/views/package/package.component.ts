@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CartService } from '../../services/cart.service';
 @Component({
   selector: 'app-package',
   imports: [CommonModule],
@@ -11,6 +12,7 @@ export class PackageComponent {
 
   paquetes = [
     {
+    id:1,
     img: '/images/Brasil.jpg',
     titulo: 'Paquetes a Rio de Janeiro',
     descripcion: ['Saliendo desde Buenos Aires', 'Hotel + Vuelo'],
@@ -18,6 +20,7 @@ export class PackageComponent {
     calificacion: 0
     },
     {
+    id:2,
     img: '/images/holanda.jpg',
     titulo: 'Paquetes a Amsterdam',
     descripcion: ['Saliendo desde Buenos Aires', 'Hotel + Vuelo'],
@@ -25,6 +28,7 @@ export class PackageComponent {
     calificacion: 0
     },
     {
+    id:3,
     img: '/images/nyc.jpg',
     titulo: 'Paquetes a Nueva York',
     descripcion: ['Saliendo desde Buenos Aires', 'Hotel + Vuelo'],
@@ -32,6 +36,7 @@ export class PackageComponent {
     calificacion: 0
     },
     {
+    id:4,
     img: '/images/venecia.jpg',
     titulo: 'Paquetes a Venecia',
     descripcion: ['Saliendo desde Buenos Aires', 'Hotel + Vuelo'],
@@ -39,13 +44,15 @@ export class PackageComponent {
     calificacion: 0
     },
     {
+    id :5,
     img: '/images/paris.jpg',
     titulo: 'Paquetes a Paris',
     descripcion: ['Saliendo desde Buenos Aires', 'Hotel + Vuelo'],
-    precio: '$947,531',
+    price: '$947,531',
     calificacion: 0
     },
     {
+      id:6,
     img: '/images/santiago.jpg',
     titulo: 'Paquetes a Santiago de Chile',
     descripcion: ['Saliendo desde Buenos Aires', 'Hotel + Vuelo'],
@@ -53,18 +60,24 @@ export class PackageComponent {
     calificacion: 0
     },
     {
+      id:7,
     img: '/images/estambul.jpg',
     titulo: 'Paquetes a Estambul',
     descripcion: ['Saliendo desde Buenos Aires', 'Hotel + Vuelo'],
-    precio: '$986,971',
+    price: '$986,971',
     calificacion: 0
     }
   ]
   calificacionpaquete(pack: any, rate: number){
     pack.calificacion = rate;
   }
+   CartService = inject(CartService)
 
-  
+    addCart(paquetes:any){
+      this.CartService.updateCart(paquetes)
+   }
+
+
   sliderscroll(direccion: number){
     const contenedor = document.querySelector('.carrusel') as HTMLElement;
     const tarjeta = document.querySelector('.imagenes')
