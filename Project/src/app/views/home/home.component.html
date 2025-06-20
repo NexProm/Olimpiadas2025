@@ -1,4 +1,9 @@
-<br><br>
+<div class="hero-container">
+  <img src="images/banner.png" alt="Ciudad" class="hero-image">
+  <div class="hero-texto">
+    <h1>Tu próximo destino<br>te espera.</h1>
+  </div>
+</div>
 
 <div class="forms">
 <form action="/buscar-paquetes" method="get">
@@ -43,20 +48,8 @@
       </select>
     </div>
   </div>
-
-
-
   <div class="form-actions">
     <button type="submit">Comprar</button>
   </div>
 </form>
 </div>
-<img class="banner" src="images/banner.png">
-<div>
-  <app-product *ngFor="let product of products" [data]="product" (addToCart)="addCart($event)">
-  </app-product>
-</div>
-<img src="images/xd.webp" class="jose">
-<br>
-
-

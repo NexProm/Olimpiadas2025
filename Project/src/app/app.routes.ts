@@ -5,30 +5,25 @@ import { PackageComponent } from './views/package/package.component';
 import { InicioSesionComponent } from './views/inicio-sesion/inicio-sesion.component';
 import { RegistroComponent } from './views/registro/registro.component';
 import { CompraComponent } from './views/compra/compra.component';
+import { AlojamientosComponent } from './views/alojamientos/alojamientos.component';
+import { VuelosComponent } from './views/vuelos/vuelos.component';
+import { AlquileresComponent } from './views/alquileres/alquileres.component';
+import { AutosComponent } from './views/autos/autos.component';
+import { AsistenciaComponent } from './views/asistencia/asistencia.component';
+import { MicrosComponent } from './views/micros/micros.component';
 
 export const routes: Routes = [
-  {
-    path:'',
-    component: HomeComponent
-  },
-  {
-    path:'carrito',
-    component: CarritoComponent
-  },
-  {
-    path:'package',
-    component: PackageComponent
-  },
-  {
-    path: 'inicio-sesion',
-    component: InicioSesionComponent
-  },
-  {
-    path: 'registro',
-    component: RegistroComponent
-  },
-  {
-    path: 'compra',
-    component: CompraComponent
-  }
+  { path: '', component: HomeComponent },
+  { path: 'carrito', component: CarritoComponent },
+  { path: 'package', component: PackageComponent },
+  { path: 'inicio-sesion', component: InicioSesionComponent },
+  { path: 'registro', component: RegistroComponent },
+  { path: 'compra', component: CompraComponent },
+  { path: 'alojamientos', component: AlojamientosComponent },
+  { path: 'vuelos', component: VuelosComponent },
+  { path: 'alquileres', component: AlquileresComponent },
+  { path: 'autos', component: AutosComponent },
+  { path: 'asistencia', component: AsistenciaComponent },
+  { path: 'micros', component: MicrosComponent },
+  { path: '**', redirectTo: '', pathMatch: 'full' } 
 ];

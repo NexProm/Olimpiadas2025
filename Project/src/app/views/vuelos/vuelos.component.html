@@ -1,0 +1,48 @@
+<br>
+<div class="forms">
+  <form action="/buscar-vuelos" method="get">
+    <h2>Vuelos</h2>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="origen">Origen:</label>
+        <input type="text" id="origen" name="origen" placeholder="Buenos Aires, Ciudad..." required>
+      </div>
+
+      <div class="form-group">
+        <label for="destino">Destino:</label>
+        <input type="text" id="destino" name="destino" placeholder="Ingresá hacia dónde querés ir" required>
+      </div>
+
+      <div class="form-group">
+        <label for="fecha_ida">Fecha de ida:</label>
+        <input type="date" id="fecha_ida" name="fecha_ida">
+      </div>
+
+      <div class="form-group">
+        <label for="fecha_vuelta">Fecha de vuelta:</label>
+        <input type="date" id="fecha_vuelta" name="fecha_vuelta">
+      </div>
+
+      <div class="form-group">
+        <label for="pasajeros">Pasajeros y clase:</label>
+        <div class="pasajeros-box">
+          <span>👤</span>
+          <input type="text" id="pasajeros" name="pasajeros" placeholder="1 persona, Económica">
+        </div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <label class="toggle-switch">
+        <input type="checkbox" id="cualquier_fecha">
+        <span class="slider"></span>
+        Cualquier fecha más barata
+      </label>
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" class="search-button">🔍 Buscar</button>
+    </div>
+  </form>
+</div>
