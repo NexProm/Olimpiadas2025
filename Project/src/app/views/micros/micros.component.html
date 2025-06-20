@@ -1,0 +1,71 @@
+<br>
+<div class="forms">
+  <form action="/buscar-traslados" method="get">
+    <h2>Traslados</h2>
+
+    <!-- Radios -->
+    <div class="form-row radio-group">
+      <label><input type="radio" name="direccion" value="desde" checked> <strong>Desde el aeropuerto</strong></label>
+      <label><input type="radio" name="direccion" value="hacia"> Hacia el aeropuerto</label>
+    </div>
+
+    <div class="form-row">
+      <!-- Desde -->
+      <div class="form-group icon-group">
+        <label for="desde">DESDE</label>
+        <div class="input-icon">
+          <span class="icono">📍</span>
+          <input type="text" id="desde" name="desde" placeholder="Buenos Aires, Ciudad de Buenos Aires" required>
+        </div>
+      </div>
+
+      <!-- Hasta -->
+      <div class="form-group icon-group">
+        <label for="hasta">HASTA</label>
+        <div class="input-icon">
+          <span class="icono">📍</span>
+          <input type="text" id="hasta" name="hasta" placeholder="Ingresá un hotel o dirección adicional" required>
+        </div>
+      </div>
+
+      <!-- Fecha -->
+      <div class="form-group icon-group">
+        <label for="fecha">FECHA</label>
+        <div class="input-icon">
+          <span class="icono">📅</span>
+          <input type="text" id="fecha" name="fecha" placeholder="Llegada del vuelo">
+        </div>
+      </div>
+
+      <!-- Hora -->
+      <div class="form-group icon-group">
+        <label for="hora">HORA DEL VUELO</label>
+        <div class="input-icon select-icon">
+          <input type="time" id="hora" name="hora" value="00:00">
+          <span class="icono">▼</span>
+        </div>
+      </div>
+
+      <!-- Pasajeros -->
+      <div class="form-group icon-group">
+        <label for="pasajeros">PASAJEROS</label>
+        <div class="input-icon">
+          <span class="icono">👤</span>
+          <input type="number" id="pasajeros" name="pasajeros" value="1" min="1">
+        </div>
+      </div>
+
+      <!-- Botón -->
+      <div class="form-group">
+        <button type="submit" class="boton-buscar"><span class="icono">🔍</span> Buscar</button>
+      </div>
+    </div>
+
+    <!-- Checkbox regreso -->
+    <div class="form-row">
+      <label>
+        <input type="checkbox" id="agregar-regreso"> Quiero agregar el regreso
+      </label>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,52 @@
+<br>
+<div class="forms">
+  <form action="/buscar-paquetes" method="get">
+    <h2>Alquileres temporarios</h2>
+
+    <div class="form-row">
+      <!-- Destino -->
+      <div class="form-group icon-group">
+        <label for="origen">DESTINO</label>
+        <div class="input-icon">
+          <span class="icono">📍</span>
+          <input type="text" id="origen" name="origen" placeholder="Ingresá una ciudad, alojamiento o punto de interés" required>
+        </div>
+      </div>
+
+      <!-- Fechas -->
+      <div class="form-group icon-group">
+        <label for="fecha">FECHAS</label>
+        <div class="fechas-container">
+          <div class="input-icon">
+            <span class="icono">📅</span>
+            <input type="text" id="entrada" name="entrada" placeholder="Entrada">
+          </div>
+          <div class="input-icon">
+            <span class="icono">📅</span>
+            <input type="text" id="salida" name="salida" placeholder="Salida">
+          </div>
+        </div>
+      </div>
+
+      <!-- Huéspedes -->
+      <div class="form-group icon-group">
+        <label for="huespedes">HUÉSPEDES</label>
+        <div class="input-icon">
+          <span class="icono">👤</span>
+          <input type="number" id="huespedes" name="huespedes" value="2" min="1" required>
+        </div>
+      </div>
+
+      <!-- Botón -->
+      <div class="form-group">
+        <button type="submit" class="boton-buscar"><span class="icono">🔍</span> Buscar</button>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <label>
+        <input type="checkbox" id="no-fecha"> Todavía no he decidido la fecha
+      </label>
+    </div>
+  </form>
+</div>

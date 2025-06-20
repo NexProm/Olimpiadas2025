@@ -1,7 +1,3 @@
-.banner {
-  width: 99%;
-}
-
 form {
   background-color: rgb(255, 49, 49);
   border-radius: 10px;
@@ -267,32 +263,137 @@ strong{
     font-size: 22px;
   }
 }
-.hero-container {
-  position: relative;
+.formulario-busqueda {
+  background-color: #2a0066; /* tono violeta oscuro */
+  border-radius: 12px;
+  color: white;
+  padding: 25px;
   width: 100%;
-  height: 400px;
-  overflow: hidden;
+  max-width: 1200px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-.hero-image {
-  width: 100%;
-  object-fit: cover;
+.custom-field {
+  background-color: white;
+  color: black;
+  border-radius: 8px;
+  padding: 10px;
+  min-width: 250px;
 }
 
-.hero-texto {
-  position: absolute;
-  top: 39%;
-  left: 25%;
-  transform: translate(-50%, -50%);
+.custom-field label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.icon-input {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 6px;
+  padding: 8px;
+}
+
+.icon-input input {
+  border: none;
+  outline: none;
+  font-size: 15px;
+  padding: 5px 10px;
+  width: 100%;
+}
+
+.icon {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.double-input {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.double-input .icon {
+  grid-column: 1 / span 2;
+}
+
+.custom-button {
+  display: flex;
+  align-items: flex-end;
+}
+
+.custom-button button {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.custom-button button:hover {
+  background-color: #cc0000;
+}
+
+.form-extra {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
   color: white;
 }
 
-.hero-texto h1 {
-  font-size: 2.8rem;
-  margin-bottom: 10px;
+/* ícono dentro del input */
+.input-icon {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 6px;
+  padding: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
-.hero-texto p {
-  font-size: 1.2rem;
+.input-icon input {
+  border: none;
+  outline: none;
+  font-size: 15px;
+  width: 100%;
+  background: transparent;
+  padding-left: 10px;
 }
 
+.icono {
+  font-size: 18px;
+  color: #555;
+}
+
+/* grupo doble para fechas */
+.fechas-container {
+  display: flex;
+  gap: 10px;
+}
+
+/* botón circular rojo */
+.boton-buscar {
+  background-color: #e60000;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 20px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.boton-buscar:hover {
+  background-color: #cc0000;
+}
