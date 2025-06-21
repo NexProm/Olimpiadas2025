@@ -35,7 +35,9 @@ export class CarritoComponent {
 
   const dialogRef = this.dialog.open(CompraComponent, {
     data: { carrito: this.CartService.cart, total: this.CartService.total },
-    width: '1000px'
+    width: '100%',
+    maxWidth: '60vw',
+
   });
 
   dialogRef.afterClosed().subscribe(resultado => {

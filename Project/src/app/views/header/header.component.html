@@ -1,6 +1,6 @@
 <div class="violeta">
   <div class="barra">
-    <h1>EasyTravel</h1>
+    <h1 class="titulo">EasyTravel</h1>
     <ul class="menu">
       <li><a href="#">Home</a></li>
       <li><a href="/package">Productos</a></li>
@@ -10,12 +10,11 @@
       <li *ngIf="!usuario">
         <a routerLink="/inicio-sesion">Login</a>
       </li>
-      <li *ngIf="usuario" class="perfil" (click)="toggleMenu()">
-        <img src="images/perfil.png" alt="Perfil" width="24" height="24">
-        <span>{{ usuario.nombre }}</span>
-        <ul *ngIf="mostrarMenu" class="dropdown">
-          <li (click)="cerrarSesion()">Cerrar sesión</li>
-        </ul>
+      <li *ngIf="usuario" class="perfil">
+        <a routerLink="/perfil">
+          <img src="images/perfil.png" class="perfil-img">
+          <span>{{ usuario.nombre }}</span>
+        </a>
       </li>
 
 

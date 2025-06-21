@@ -5,6 +5,7 @@ import { PackageComponent } from './views/package/package.component';
 import { InicioSesionComponent } from './views/inicio-sesion/inicio-sesion.component';
 import { RegistroComponent } from './views/registro/registro.component';
 import { CompraComponent } from './views/compra/compra.component';
+import { PerfilComponent } from './views/perfil/perfil.component';
 
 export const routes: Routes = [
   {
@@ -30,5 +31,9 @@ export const routes: Routes = [
   {
     path: 'compra',
     component: CompraComponent
+  },
+  {
+    path: 'perfil',
+    component: PerfilComponent
   }
 ];

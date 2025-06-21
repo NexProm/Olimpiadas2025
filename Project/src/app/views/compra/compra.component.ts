@@ -19,6 +19,7 @@ export class CompraComponent {
     cvv: ''
   };
 
+
   constructor(
     public dialogRef: MatDialogRef<CompraComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any
