@@ -8,17 +8,18 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
-h1 {
+.logo {
   color: rgb(253, 253, 253);
   text-decoration: none;
   list-style: none;
   margin: 0;
+  height: 30px;
 }
 
 .menu {
-
   display: flex;
   justify-content: space-around;
   list-style: none;
@@ -30,9 +31,8 @@ h1 {
   margin-left: 20px;
 }
 
-a{
-  background-color: rgb(255, 85, 85);
-  color:white;
+a {
+  color: white;
 }
 
 .menu a {
@@ -42,6 +42,7 @@ a{
   font-size: 18px;
   padding: 10px;
   display: block;
+  border-radius: 5px;
 }
 
 .menu a:hover {
@@ -50,11 +51,14 @@ a{
 }
 
 .menu-servicios {
-  background-color: rgb(255, 62, 62);
+  background-color: rgb(255, 66, 66);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
 }
 
 .servicios {
-
   display: flex;
   justify-content: space-around;
   list-style: none;
@@ -68,10 +72,9 @@ a{
   margin-right: 10px;
 }
 
-
 .servicios a {
   color: white;
-  background-color: #ff4a4a;
+  background-color: rgb(255, 85, 85);
   text-decoration: none;
   font-size: 18px;
   padding: 10px 15px;
@@ -84,33 +87,18 @@ a{
   background-color: rgb(255, 141, 141);
 }
 
-
-
-.servicios a:hover {
-  background-color: rgb(255, 141, 141);
-  transition: background-color 0.3s ease;
-}
-
-.menu-servicios {
+.servicios ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
-}
-
-.perfil{
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  .perfil-img{
-    width: 20%;
-    height: 5vh;
-  }
-}
-.dropdown{
-  margin: auto;
 }
 
+.perfil-img {
+  width: 20%;
+  height: 5vh;
+}
+
+.dropdown {
+  margin: auto;
+}
