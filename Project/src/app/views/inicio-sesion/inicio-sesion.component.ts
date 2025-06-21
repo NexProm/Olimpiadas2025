@@ -35,8 +35,12 @@ export class InicioSesionComponent implements OnInit {
 
     this.loginService.login(datos).subscribe({
       next: (res) =>{
+        const usuario = {
+          nombre: res.nombre,
+          email: this.Form.value.email
+        };
         alert(res.mensaje + ", " + res.nombre);
-        this.clienteService.setUsuario(res);
+        this.clienteService.setUsuario(usuario);
         this.router.navigate(['/'])
       },
       error: (err) =>{

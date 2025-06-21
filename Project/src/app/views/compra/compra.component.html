@@ -7,9 +7,10 @@
     <option value="tarjeta">Tarjeta de crédito</option>
   </select>
 
-  <div *ngIf="metodoPago === 'mercado'" class="qr-section">
+  <div *ngIf="metodoPago === 'mercado'" class="qr">
     <p>Escaneá el código para pagar:</p>
     <img src="images/qr.png" alt="QR Mercado Pago" width="150" height="150">
+    <button class="button_pago">confirmar</button>
   </div>
 
 
@@ -18,21 +19,32 @@
       <h2>Datos de tarjeta</h2>
       <div class="campo">
         <label>Nombre en la tarjeta</label>
-        <input type="text" required>
+        <input type="text" required [(ngModel)]="datosTarjeta.nombre" name="nombre">
       </div>
       <div class="campo">
          <label>Número de tarjeta</label>
-         <input type="text" maxlength="16" required>
+         <input type="text" maxlength="16" required [(ngModel)]="datosTarjeta.numero" name="numero">
       </div>
       <div class="campo">
         <label>Fecha de vencimiento</label>
-        <input type="month" required>
+        <input type="month" required [(ngModel)]="datosTarjeta.vencimiento" name="vencimiento">
       </div>
       <div class="campo">
-            <label>CVV</label>
-            <input type="text" maxlength="3" required>
+        <label>CVV</label>
+        <input type="text" maxlength="3" required [(ngModel)]="datosTarjeta.cvv" name="cvv">
       </div>
-
+      <button class="button_pago">confirmar</button>
     </form>
+    <div class="tarjeta-muestra">
+      <p class="tarjeta-titulo">Tarjeta de credito</p>
+      <img src="images/chip.png" class="chip-img">
+      <p class="numero">{{ datosTarjeta.numero  }}</p>
+      <div class="datos-abajo"><!--Datos inferiores de la tarjeta -->
+        <span>{{ datosTarjeta.nombre }}</span>
+        <span>{{ datosTarjeta.vencimiento }}</span>
+        <span>{{datosTarjeta.cvv }}</span>
+
+      </div>
+    </div>
   </div>
 </div>

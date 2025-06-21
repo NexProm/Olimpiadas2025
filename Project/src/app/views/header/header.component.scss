@@ -20,7 +20,6 @@
 }
 
 .menu {
-
   display: flex;
   justify-content: space-around;
   list-style: none;
@@ -32,8 +31,8 @@
   margin-left: 20px;
 }
 
-a{
-  color:white;
+a {
+  color: white;
 }
 
 .menu a {
@@ -53,10 +52,13 @@ a{
 
 .menu-servicios {
   background-color: rgb(255, 66, 66);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
 }
 
 .servicios {
-
   display: flex;
   justify-content: space-around;
   list-style: none;
@@ -69,7 +71,6 @@ a{
   margin-left: 10px;
   margin-right: 10px;
 }
-
 
 .servicios a {
   color: white;
@@ -86,22 +87,18 @@ a{
   background-color: rgb(255, 141, 141);
 }
 
-
-
-.servicios a:hover {
-  background-color: rgb(255, 141, 141);
-  transition: background-color 0.3s ease;
-}
-
-.menu-servicios {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
-}
-
 .servicios ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  text-align: center;
+}
+
+.perfil-img {
+  width: 20%;
+  height: 5vh;
+}
+
+.dropdown {
+  margin: auto;
 }

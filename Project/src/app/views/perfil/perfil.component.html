@@ -1,0 +1,25 @@
+<div class="perfil-seccion">
+  <div class="menu-perfil">
+      <div class="perfil-opcion" [class.seleccionado]="mostrarcontenido == 'cuenta'" (click)="activarContenido('cuenta')">
+        <img src="images/icon-cuenta.png" class="perfil-icon">
+        <p>Cuenta</p>
+      </div>
+      <div class="perfil-opcion" [class.seleccionado]="mostrarcontenido == 'compras'" (click)="activarContenido('compras')">
+        <img src="images/icon-compras.png" class="perfil-icon">
+        <p>Cuenta</p>
+      </div>
+
+
+      <button (click)="cerrarSesion()">Cerrar sesion</button>
+  </div>
+  <div *ngIf="mostrarcontenido == 'cuenta'">
+    <p>Informacion de la cuenta</p>
+    <p>Nombre: {{usuario.nombre}}</p>
+    <p>Correo: {{usuario.email}}</p>
+  </div>
+  <div *ngIf="mostrarcontenido == 'compras'">
+    chau
+  </div>
+</div>
+
+
