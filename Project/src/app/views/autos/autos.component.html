@@ -1,0 +1,61 @@
+<br>
+<div class="forms">
+  <form action="/buscar-autos" method="get">
+    <h2>Alquiler de autos</h2>
+
+    <div class="form-row">
+      <!-- Lugar de retiro -->
+      <div class="form-group icon-group">
+        <label for="retiro">LUGAR DE RETIRO</label>
+        <div class="input-icon">
+          <span class="icono">📍</span>
+          <input type="text" id="retiro" name="retiro" placeholder="Buenos Aires, Ciudad de Buenos Aires, Argentina" required>
+        </div>
+      </div>
+
+      <!-- Fecha y hora de retiro -->
+      <div class="form-group icon-group">
+        <label for="fecha-retiro">FECHA</label>
+        <div class="fechas-hora-container">
+          <div class="input-icon">
+            <span class="icono">📅</span>
+            <input type="text" id="fecha-retiro" name="fecha-retiro" placeholder="Retiro" required>
+          </div>
+          <div class="hora">
+            <label for="hora-retiro">HORA</label>
+            <input type="time" id="hora-retiro" name="hora-retiro" value="11:00">
+          </div>
+        </div>
+      </div>
+
+      <!-- Fecha y hora de devolución -->
+      <div class="form-group icon-group">
+        <label for="fecha-devolucion">FECHA</label>
+        <div class="fechas-hora-container">
+          <div class="input-icon">
+            <span class="icono">📅</span>
+            <input type="text" id="fecha-devolucion" name="fecha-devolucion" placeholder="Devolución" required>
+          </div>
+          <div class="hora">
+            <label for="hora-devolucion">HORA</label>
+            <input type="time" id="hora-devolucion" name="hora-devolucion" value="11:00">
+          </div>
+        </div>
+      </div>
+
+      <!-- Botón -->
+      <div class="form-group">
+        <button type="submit" class="boton-buscar"><span class="icono">🔍</span> Buscar</button>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <label>
+        <input type="checkbox" id="otro-destino"> Devolver en otro destino
+      </label>
+      <label>
+        <input type="checkbox" id="sin-fecha"> Todavía no he decidido la fecha
+      </label>
+    </div>
+  </form>
+</div>
