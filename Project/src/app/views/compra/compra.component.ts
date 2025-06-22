@@ -48,4 +48,5 @@ export class CompraComponent {
   cerrar(): void {
     this.dialogRef.close();
   }
+
 }

@@ -12,6 +12,7 @@ import { AlquileresComponent } from './views/alquileres/alquileres.component';
 import { AutosComponent } from './views/autos/autos.component';
 import { AsistenciaComponent } from './views/asistencia/asistencia.component';
 import { MicrosComponent } from './views/micros/micros.component';
+import { SubirProductosComponent } from './views/subir-productos/subir-productos.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -27,5 +28,7 @@ export const routes: Routes = [
   { path: 'autos', component: AutosComponent },
   { path: 'asistencia', component: AsistenciaComponent },
   { path: 'micros', component: MicrosComponent },
+  {path: 'agregar-producto', component: SubirProductosComponent},
   { path: '**', redirectTo: '', pathMatch: 'full' }
+
 ];

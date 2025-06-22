@@ -1,0 +1,11 @@
+<form (ngSubmit)="guardarProducto()">
+  <input type="text" [(ngModel)]="producto.nombre" name="nombre" required placeholder="Nombre del producto">
+
+  <input type="text" [(ngModel)]="producto.descripcion" name="descripcion" required placeholder="Descripción">
+
+  <input type="number" [(ngModel)]="producto.precioUnitario" name="precio" required placeholder="Precio">
+
+  <input type="text" placeholder="URL de imagen (opcional)" [(ngModel)]="producto.img">
+
+  <button type="submit">Guardar</button>
+</form>

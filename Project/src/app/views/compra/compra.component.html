@@ -10,7 +10,7 @@
   <div *ngIf="metodoPago === 'mercado'" class="qr">
     <p>Escaneá el código para pagar:</p>
     <img src="images/qr.png" alt="QR Mercado Pago" width="150" height="150">
-    <button class="button_pago">confirmar</button>
+    <button class="button_pago" (click)="confirmarCompra()">confirmar</button>
   </div>
 
 
@@ -33,7 +33,7 @@
         <label>CVV</label>
         <input type="text" maxlength="3" required [(ngModel)]="datosTarjeta.cvv" name="cvv">
       </div>
-      <button class="button_pago">confirmar</button>
+      <button class="button_pago" (click)="confirmarCompra()">confirmar</button>
     </form>
     <div class="tarjeta-muestra">
       <p class="tarjeta-titulo">Tarjeta de credito</p>
