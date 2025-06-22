@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Pedido realizado</title>
+  <link rel="stylesheet" href="pedidos.css">
+</head>
+<body>
+  <div class="pedido-container">
+    <h1>¡Gracias por tu pedido!</h1>
+    <p>Nos pondremos en contacto contigo lo antes posible para confirmar los detalles.</p>
+
+    <form class="pedido-form">
+      <label for="nombre">Nombre completo</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="mensaje">Mensaje o detalles adicionales</label>
+      <textarea id="mensaje" name="mensaje" rows="4" placeholder="Por ejemplo: Fecha deseada, cantidad de noches, comentarios..."></textarea>
+
+      <button type="submit">Enviar pedido</button>
+    </form>
+
+    <a href="/" class="volver">← Volver al inicio</a>
+  </div>
+</body>
+</html>
