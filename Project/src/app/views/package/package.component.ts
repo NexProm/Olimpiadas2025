@@ -1,6 +1,8 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CartService } from '../../services/cart.service';
+import { AgregarProductosService } from '../../services/agregar-productos.service';
+import { ProductoCarrito } from '../../models/producto-carrito.model';
 @Component({
   selector: 'app-package',
   imports: [CommonModule],
@@ -29,7 +31,14 @@ export class PackageComponent {
    }
   ]
 
-  paquetes = [
+  paquetes: {
+    id: number;
+    img: string;
+    titulo: string;
+    descripcion: string[];
+    precio: string;
+    calificacion: number;
+  } []= [
     {
     id:1,
     img: '/images/Brasil.jpg',
@@ -67,11 +76,11 @@ export class PackageComponent {
     img: '/images/paris.jpg',
     titulo: 'Paquetes a Paris',
     descripcion: ['Saliendo desde Buenos Aires', 'Hotel + Vuelo'],
-    price: '$947,531',
+    precio: '$947,531',
     calificacion: 0
     },
     {
-      id:6,
+    id:6,
     img: '/images/santiago.jpg',
     titulo: 'Paquetes a Santiago de Chile',
     descripcion: ['Saliendo desde Buenos Aires', 'Hotel + Vuelo'],
@@ -79,23 +88,60 @@ export class PackageComponent {
     calificacion: 0
     },
     {
-      id:7,
+    id:7,
     img: '/images/estambul.jpg',
     titulo: 'Paquetes a Estambul',
     descripcion: ['Saliendo desde Buenos Aires', 'Hotel + Vuelo'],
-    price: '$986,971',
+    precio: '$986,971',
     calificacion: 0
     }
   ]
   calificacionpaquete(pack: any, rate: number){
     pack.calificacion = rate;
   }
-   CartService = inject(CartService)
+  CartService = inject(CartService)
+  agregarProductosService = inject(AgregarProductosService);
 
-    addCart(paquetes:any){
-      this.CartService.updateCart(paquetes)
-   }
+  addCart(paquete:any){
+    const producto: ProductoCarrito = {
+      id: paquete.id,
+  nombre: paquete.titulo,
+  descripcion: paquete.descripcion.join(', '),
+  precioUnitario: typeof paquete.precio === 'string'
+    ? this.CartService.parsePrecio(paquete.precio)
+    : paquete.precio,
+  calificacion: paquete.calificacion,
+  img: paquete.img,
+  price: typeof paquete.precio === 'string'
+    ? this.CartService.parsePrecio(paquete.precio)
+    : paquete.precio,
+  cant: 1
+    };
+    this.CartService.updateCart(producto)
+  }
 
+  asignarImagen(): string {
+    return '/images/avion.jpg';
+  }
+   ngOnInit(): void {
+  this.agregarProductosService.listarProductos().subscribe({
+    next: (res) => {
+      const nuevosPaquetes = res
+      .filter(p => typeof p.id === 'number')
+      .map((p) => ({
+        id: p.id!,
+        img: p.img || this.asignarImagen(),
+        titulo: `Paquetes a ${p.nombre}`,
+        descripcion: [p.descripcion, 'Hotel + Vuelo'],
+        precio: p.precioUnitario.toLocaleString(),
+        calificacion: 0
+      }));
+
+      this.paquetes = this.paquetes.concat(nuevosPaquetes);
+    },
+    error: (err) => console.error('Error al obtener productos', err)
+  });
+}
 
   sliderscroll(direccion: number){
     const contenedor = document.querySelector('.carrusel') as HTMLElement;

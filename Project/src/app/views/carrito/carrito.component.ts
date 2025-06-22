@@ -1,9 +1,12 @@
+import { ClienteService } from './../../services/cliente.service';
 import { RouterModule } from '@angular/router';
 import { CartService } from './../../services/cart.service';
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatDialog } from '@angular/material/dialog';
 import { CompraComponent } from '../compra/compra.component';
+import { PedidosService } from '../../services/pedidos.service';
+import { Pedido } from '../../models/pedido.model';
 
 @Component({
   selector: 'app-carrito',
@@ -14,12 +17,14 @@ import { CompraComponent } from '../compra/compra.component';
 export class CarritoComponent {
   constructor(private dialog: MatDialog) {}
   CartService = inject(CartService)
+  pedidosService = inject(PedidosService)
+  clienteService = inject(ClienteService)
   usuario: any = null;
   ngOnInit(): void {
-    const guardado = localStorage.getItem('usuario');
-    if (guardado) {
-      this.usuario = JSON.parse(guardado);
-    }
+    this.clienteService.usuario$.subscribe(user => {
+    this.usuario = user;
+    console.log(' Usuario cargado:', this.usuario);
+  });
   }
 
   abrirCompra() {
@@ -41,7 +46,28 @@ export class CarritoComponent {
   });
 
   dialogRef.afterClosed().subscribe(resultado => {
+  if (resultado) {
+    const pedido: Pedido = {
+    clientesId: this.usuario.id,
+    total: this.CartService.total,
+    productos: this.CartService.cart.map(x => ({
+    productoId: x.id as number,
+    cantidad: x.cant
+  }))
+};
+    console.log('Pedido que se enviará:', pedido);
+    this.pedidosService.enviarPedido(pedido).subscribe({
+      next: (re) => {
+        alert(re.mensaje)
+        this.CartService.vaciarCarrito();
 
-  });
+      },
+      error: err => {
+         alert('Error al registrar el pedido: ' + (err?.message));
+      }
+    });
+  }
+});
+
 }
 }

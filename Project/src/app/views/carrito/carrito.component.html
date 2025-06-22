@@ -11,7 +11,7 @@
   </div>
 
   <div *ngFor="let cart of CartService.cart" class="tabla-item">
-    <span>{{ cart.titulo}}</span>
+    <span>{{ cart.nombre}}</span>
     <span>${{ cart.price }}</span>
     <span>x{{ cart.cant }}</span>
     <span>${{ cart.price * cart.cant }}</span>

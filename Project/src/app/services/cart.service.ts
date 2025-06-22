@@ -1,10 +1,13 @@
 import { Injectable } from '@angular/core';
+import { ProductoCarrito } from '../models/producto-carrito.model';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class CartService {
-  cart: any = []
+
+  cart: ProductoCarrito[] = [];
   total = 0
   constructor() {
     let cart = localStorage.getItem('products')
@@ -27,7 +30,7 @@ export class CartService {
        localStorage.setItem('products', JSON.stringify(this.cart))
 
   }
-  private parsePrecio(precio: string): number {
+  parsePrecio(precio: string): number {
     return parseInt(precio.replace(/\D/g, ''), 10);
   }
   deleteCart(product:any){
@@ -42,4 +45,10 @@ export class CartService {
     }
     this.total = total
   }
+  vaciarCarrito() {
+    this.cart = [];
+    this.total = 0;
+    localStorage.removeItem('products');
+  }
+
 }
