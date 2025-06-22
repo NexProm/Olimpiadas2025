@@ -9,6 +9,25 @@ import { CartService } from '../../services/cart.service';
 })
 export class PackageComponent {
   Indexactual = 0;
+  
+  buscados = [
+    {
+      img: '/images/Playabrasil.jpg',
+      des: 'BRASIL'
+    },
+     {
+      img: '/images/Caribeplaya.jpg',
+      des: 'CARIBE'
+    },
+     {
+      img: '/images/Mexicoplaya.jpg',
+      des: 'MÉXICO'
+    },
+     {
+      img: '/images/Filipinasplaya.jpg',
+      des: 'FILIPINAS'
+   }
+  ]
 
   paquetes = [
     {
