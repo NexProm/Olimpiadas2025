@@ -3,6 +3,7 @@ import { Producto } from '../models/producto.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { PedidoPendiente } from '../models/pedido-pendiente.model';
 
 
 @Injectable({
@@ -20,4 +21,10 @@ export class AgregarProductosService {
   listarProductos(): Observable<Producto[]> {
     return this.http.get<Producto[]>(this.url);
   }
+  eliminarProducto(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.url}/${id}`);
+  }
+
+
+
 }

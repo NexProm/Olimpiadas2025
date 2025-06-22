@@ -1,5 +1,5 @@
 import { ClienteService } from './../../services/cliente.service';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { CartService } from './../../services/cart.service';
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -20,6 +20,7 @@ export class CarritoComponent {
   pedidosService = inject(PedidosService)
   clienteService = inject(ClienteService)
   usuario: any = null;
+  router = inject(Router)
   ngOnInit(): void {
     this.clienteService.usuario$.subscribe(user => {
     this.usuario = user;
@@ -60,6 +61,7 @@ export class CarritoComponent {
       next: (re) => {
         alert(re.mensaje)
         this.CartService.vaciarCarrito();
+        this.router.navigate(['/pedidos']);
 
       },
       error: err => {

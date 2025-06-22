@@ -5,4 +5,5 @@ export interface Producto {
   precioUnitario: number;
   calificacion?: number;
   img?: string;
+  categoria?: string;
 }

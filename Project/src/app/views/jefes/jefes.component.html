@@ -28,28 +28,29 @@
     </section>
     <section>
       <h2>Gestión de Productos Turísticos</h2>
-      <form>
-        <label>Nombre del producto</label>
-        <input type="text" placeholder="Ej. Paquete a Bariloche">
+      <form (ngSubmit)="guardarProducto()" #formulario="ngForm">
+  <label>Nombre del producto</label>
+  <input type="text" [(ngModel)]="producto.nombre" name="nombre" required placeholder="Ej. Paquete a Bariloche" />
 
-        <label>Descripción</label>
-        <textarea rows="3" placeholder="Incluye vuelos, hotel y excursiones..."></textarea>
+  <label>Descripción</label>
+  <textarea [(ngModel)]="producto.descripcion" name="descripcion" rows="3" placeholder="Incluye vuelos, hotel y excursiones..."></textarea>
 
-        <label>Precio</label>
-        <input type="number" placeholder="Ej. 150000">
+  <label>Precio</label>
+  <input type="number" [(ngModel)]="producto.precioUnitario" name="precioUnitario" required placeholder="Ej. 150000" />
 
-        <label>Imagen (URL)</label>
-        <input type="text" placeholder="https://...">
+  <label>Imagen (URL)</label>
+  <input type="text" [(ngModel)]="producto.img" name="imagen" placeholder="https://..." />
 
-        <label>Categoría</label>
-        <select>
-          <option>Hotel</option>
-          <option>Vuelo</option>
-          <option>Paquete</option>
-        </select>
+  <label>Categoría</label>
+  <select [(ngModel)]="producto.categoria" name="categoria">
+    <option>Hotel</option>
+    <option>Vuelo</option>
+    <option>Paquete</option>
+  </select>
 
-        <button class="btn btn-approve" type="submit">Agregar producto</button>
-      </form>
+  <button class="btn btn-approve" type="submit">Agregar producto</button>
+</form>
+
 
       <h3>Productos existentes</h3>
       <table>
@@ -62,16 +63,17 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Paquete a Mendoza</td>
-            <td>Paquete</td>
-            <td>$120000</td>
-            <td>
-              <button class="btn btn-edit">Editar</button>
-              <button class="btn btn-delete">Eliminar</button>
-            </td>
+          <tr *ngFor="let producto of productos">
+          <td>{{ producto.nombre }}</td>
+          <td>{{ producto.categoria || 'Sin categoría' }}</td>
+          <td>${{ producto.precioUnitario }}</td>
+          <td>
+            <button class="btn btn-edit" >Editar</button>
+            <button class="btn btn-delete" (click)="eliminarProducto(producto.id!)">Eliminar</button>
+          </td>
           </tr>
         </tbody>
+
       </table>
     </section>
     <section>
@@ -87,16 +89,17 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>María González</td>
-            <td>Paquete a Cataratas</td>
-            <td>2025-06-20</td>
+         <tr *ngFor="let p of pedidos">
+            <td>{{ p.clienteNombre }}</td>
+            <td>{{ p.productos.join(', ') }}</td>
+            <td>2025-06</td>
             <td><textarea rows="2" placeholder="Comentario opcional..."></textarea></td>
             <td>
-              <button class="btn btn-approve">Aprobar</button>
-              <button class="btn btn-reject">Rechazar</button>
+              <button class="btn btn-approve" (click)="cambiarEstado(p.id, 'entregado')">Entregar</button>
+              <button class="btn btn-reject" (click)="cambiarEstado(p.id, 'rechazado')">Rechazar</button>
             </td>
           </tr>
+
         </tbody>
       </table>
     </section>
