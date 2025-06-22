@@ -95,16 +95,13 @@ a {
 }
 .perfil{
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+
   img {
     width: 100%;
     height: 7vh;
+    padding: 0px;
+    margin: 0px;
   }
-  span{
-    display: flex;
-  }
+
 }
-.dropdown {
-  margin: auto;
-}
+

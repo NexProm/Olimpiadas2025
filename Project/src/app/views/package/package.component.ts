@@ -11,7 +11,7 @@ import { ProductoCarrito } from '../../models/producto-carrito.model';
 })
 export class PackageComponent {
   Indexactual = 0;
-  
+
   buscados = [
     {
       img: '/images/Playabrasil.jpg',

@@ -15,7 +15,9 @@ import { MicrosComponent } from './views/micros/micros.component';
 import { SubirProductosComponent } from './views/subir-productos/subir-productos.component';
 import { JefesComponent } from './views/jefes/jefes.component';
 import { PedidosComponent } from './views/pedidos/pedidos.component';
-import { SuscribirseComponent } from './suscribirse/suscribirse.component';
+import { SuscribirseComponent } from './views/suscribirse/suscribirse.component';
+import { AboutComponent } from './views/about/about.component';
+
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -35,5 +37,6 @@ export const routes: Routes = [
   { path: 'jefes', component: JefesComponent },
   { path: 'pedidos', component: PedidosComponent },
   { path: 'suscribirse', component: SuscribirseComponent },
+  { path: 'about', component: AboutComponent},
   { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
