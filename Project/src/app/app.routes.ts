@@ -12,6 +12,9 @@ import { AlquileresComponent } from './views/alquileres/alquileres.component';
 import { AutosComponent } from './views/autos/autos.component';
 import { AsistenciaComponent } from './views/asistencia/asistencia.component';
 import { MicrosComponent } from './views/micros/micros.component';
+import { JefesComponent } from './views/jefes/jefes.component';
+import { PedidosComponent } from './views/pedidos/pedidos.component';
+import { SuscribirseComponent } from './suscribirse/suscribirse.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -27,5 +30,9 @@ export const routes: Routes = [
   { path: 'autos', component: AutosComponent },
   { path: 'asistencia', component: AsistenciaComponent },
   { path: 'micros', component: MicrosComponent },
+  { path: 'jefes', component: JefesComponent},
+  { path: 'pedidos', component: PedidosComponent},
+  { path: 'suscribirse', component: SuscribirseComponent},
   { path: '**', redirectTo: '', pathMatch: 'full' }
+
 ];

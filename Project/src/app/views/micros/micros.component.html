@@ -2,15 +2,12 @@
 <div class="forms">
   <form action="/buscar-traslados" method="get">
     <h2>Traslados</h2>
-
-    <!-- Radios -->
     <div class="form-row radio-group">
       <label><input type="radio" name="direccion" value="desde" checked> <strong>Desde el aeropuerto</strong></label>
       <label><input type="radio" name="direccion" value="hacia"> Hacia el aeropuerto</label>
     </div>
 
     <div class="form-row">
-      <!-- Desde -->
       <div class="form-group icon-group">
         <label for="desde">DESDE</label>
         <div class="input-icon">
@@ -18,8 +15,6 @@
           <input type="text" id="desde" name="desde" placeholder="Buenos Aires, Ciudad de Buenos Aires" required>
         </div>
       </div>
-
-      <!-- Hasta -->
       <div class="form-group icon-group">
         <label for="hasta">HASTA</label>
         <div class="input-icon">
@@ -27,8 +22,6 @@
           <input type="text" id="hasta" name="hasta" placeholder="Ingresá un hotel o dirección adicional" required>
         </div>
       </div>
-
-      <!-- Fecha -->
       <div class="form-group icon-group">
         <label for="fecha">FECHA</label>
         <div class="input-icon">
@@ -36,8 +29,6 @@
           <input type="text" id="fecha" name="fecha" placeholder="Llegada del vuelo">
         </div>
       </div>
-
-      <!-- Hora -->
       <div class="form-group icon-group">
         <label for="hora">HORA DEL VUELO</label>
         <div class="input-icon select-icon">
@@ -45,8 +36,6 @@
           <span class="icono">▼</span>
         </div>
       </div>
-
-      <!-- Pasajeros -->
       <div class="form-group icon-group">
         <label for="pasajeros">PASAJEROS</label>
         <div class="input-icon">
@@ -54,14 +43,10 @@
           <input type="number" id="pasajeros" name="pasajeros" value="1" min="1">
         </div>
       </div>
-
-      <!-- Botón -->
       <div class="form-group">
         <button type="submit" class="boton-buscar"><span class="icono">🔍</span> Buscar</button>
       </div>
     </div>
-
-    <!-- Checkbox regreso -->
     <div class="form-row">
       <label>
         <input type="checkbox" id="agregar-regreso"> Quiero agregar el regreso
@@ -69,3 +54,42 @@
     </div>
   </form>
 </div>
+<br><br>
+<div class="contenedor">
+  <img src="images/Banner1.png" alt="Imagen 1">
+  <img src="images/Banner2.png" alt="Imagen 2">
+  <img src="images/Banner3.png" alt="Imagen 3">
+  <img src="images/Banner4.png" alt="Imagen 4">
+</div>
+<br><br>
+<section class="intro">
+  <h2>Viajes en micro por Argentina y países limítrofes</h2>
+  <p>Comodidad, seguridad y precios accesibles. Servicios con butacas cama, semicama o suite. TV a bordo, aire acondicionado, Wi-Fi y comidas incluidas en rutas seleccionadas.</p>
+</section>
+
+<section class="grid-listings">
+  <article class="card">
+    <h3>Buenos Aires ↔ Córdoba</h3>
+    <br>
+    <img class="imagenrelleno" src="images/cordoba.png">
+    <br>
+    <p>Servicio diario cada 2 horas. Desde $35.000 ida y vuelta. Empresa Micros Xpress. Semicama con aire, mantita y snack incluido.</p>
+    <a href="/pedidos" class="pedir">Pedir</a>
+  </article>
+  <article class="card">
+    <h3>Rosario ↔ Salta</h3>
+    <br>
+    <img class="imagenrelleno" src="images/salta.png">
+    <br>
+    <p>Salida nocturna. Servicio cama ejecutivo, pantalla individual, desayuno y cena. Desde $52.000. Duración estimada: 18 horas.</p>
+    <a href="/pedidos" class="pedir">Pedir</a>
+  </article>
+  <article class="card">
+    <h3>Mendoza ↔ Viña del Mar</h3>
+    <br>
+    <img class="imagenrelleno" src="images/viña.png">
+    <br>
+    <p>Ruta internacional. Control migratorio en Uspallata. Desde $80.000. Incluye seguro y asistencia en ruta.</p>
+    <a href="/pedidos" class="pedir">Pedir</a>
+  </article>
+</section>

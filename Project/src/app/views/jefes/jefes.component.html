@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Panel de Jefes - Administración</title>
+</head>
+<body>
+  <header>
+    <h1>Panel de Administración - Jefes</h1>
+  </header>
+  <main>
+    <section>
+      <h2>Panel General</h2>
+      <div class="dashboard-cards">
+        <div class="card">
+          <h3>Pedidos Pendientes</h3>
+          <p>inserte pedidos</p>
+        </div>
+        <div class="card">
+          <h3>Productos Publicados</h3>
+          <p>inserte pedidos</p>
+        </div>
+        <div class="card">
+          <h3>Actividad Reciente</h3>
+          <p>Último pedido hace 2 horas</p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2>Gestión de Productos Turísticos</h2>
+      <form>
+        <label>Nombre del producto</label>
+        <input type="text" placeholder="Ej. Paquete a Bariloche">
+
+        <label>Descripción</label>
+        <textarea rows="3" placeholder="Incluye vuelos, hotel y excursiones..."></textarea>
+
+        <label>Precio</label>
+        <input type="number" placeholder="Ej. 150000">
+
+        <label>Imagen (URL)</label>
+        <input type="text" placeholder="https://...">
+
+        <label>Categoría</label>
+        <select>
+          <option>Hotel</option>
+          <option>Vuelo</option>
+          <option>Paquete</option>
+        </select>
+
+        <button class="btn btn-approve" type="submit">Agregar producto</button>
+      </form>
+
+      <h3>Productos existentes</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Categoría</th>
+            <th>Precio</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Paquete a Mendoza</td>
+            <td>Paquete</td>
+            <td>$120000</td>
+            <td>
+              <button class="btn btn-edit">Editar</button>
+              <button class="btn btn-delete">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section>
+      <h2>Pedidos pendientes</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Cliente</th>
+            <th>Producto</th>
+            <th>Fecha</th>
+            <th>Comentario</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>María González</td>
+            <td>Paquete a Cataratas</td>
+            <td>2025-06-20</td>
+            <td><textarea rows="2" placeholder="Comentario opcional..."></textarea></td>
+            <td>
+              <button class="btn btn-approve">Aprobar</button>
+              <button class="btn btn-reject">Rechazar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+</body>
+</html>

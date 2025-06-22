@@ -8,7 +8,7 @@
       <li><a href="/carrito">Carrito</a></li>
       <li><a href="/about">Acerca de</a></li>
       <li *ngIf="!usuario">
-        <a routerLink="/inicio-sesion">Login</a>
+        <a routerLink="/inicio-sesion">Ingresar</a>
       </li>
       <li *ngIf="usuario" class="perfil">
         <a routerLink="/perfil">
@@ -16,6 +16,8 @@
           <span>{{ usuario.nombre }}</span>
         </a>
       </li>
+      <li><a href="/jefes">Jefes</a></li>
+      <li><a href="/suscribirse">¡Suscribite a Club EasyTravel!</a></li>
 
 
     </ul>
