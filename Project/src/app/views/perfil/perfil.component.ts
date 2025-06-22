@@ -12,6 +12,12 @@ import { Router } from '@angular/router';
 export class PerfilComponent {
   mostrarcontenido: string = 'cuenta'
   usuario: any = null
+  club: any = null;
+ constructor() {
+      const clubData = localStorage.getItem('Miembro');
+      this.club = clubData ? JSON.parse(clubData) : null;
+  }
+
   clienteService = inject(ClienteService)
   router = inject(Router)
   activarContenido(valor:string) {
@@ -26,5 +32,16 @@ export class PerfilComponent {
   cerrarSesion(): void {
     this.clienteService.limpiarUsuario()
     this.router.navigate(['/'])
+  }
+  
+  verificarMembresia(): void {
+    if(!this.club){
+      this.club = { tiempo: new Date() }; 
+      localStorage.setItem('Miembro', JSON.stringify(this.club));
+      alert('Gracias por sumarte al Club')
+    }
+  }
+  cancelarMembresia(): void {
+    this.club = localStorage.removeItem('Miembro');
   }
 }

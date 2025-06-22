@@ -8,17 +8,36 @@
         <img src="images/icon-compras.png" class="perfil-icon">
         <p>Cuenta</p>
       </div>
+      <div class="perfil-opcion" [class.seleccionado]="mostrarcontenido == 'club'" (click)="activarContenido('club')">
+        <img src="images/icon-compras.png" class="perfil-icon">
+        <p>Club +EasyTravel</p>
+      </div>
 
+      <button (click)="cerrarSesion()"><p>Cerrar sesion</p></button>
 
-      <button (click)="cerrarSesion()">Cerrar sesion</button>
   </div>
-  <div *ngIf="mostrarcontenido == 'cuenta'">
-    <p>Informacion de la cuenta</p>
+  <div class="perfil-info" *ngIf="mostrarcontenido == 'cuenta'">
+    <strong>Informacion de la cuenta</strong>
     <p>Nombre: {{usuario.nombre}}</p>
     <p>Correo: {{usuario.email}}</p>
   </div>
-  <div *ngIf="mostrarcontenido == 'compras'">
-    chau
+  <div class="perfil-compras" *ngIf="mostrarcontenido == 'compras'">
+    <strong>Listado de compras</strong>
+    <p>Pedidos Recientes:</p>
+    <p>Pedidos Recibidos:</p>
+  </div>
+    <div class="perfil-club" *ngIf="mostrarcontenido == 'club'">
+      <div *ngIf="!club">
+        <strong>Membresía</strong>
+      <p>¿Quieres ser miembro y disfrutar de los beneficios?</p>
+      <button (click)="verificarMembresia()">Comprar Membresía</button>
+    </div>
+
+    <div *ngIf="club">
+      <strong>Membresía</strong>
+      <p>¡Ya eres miembro de EasyTravel! Disfruta tus Beneficios</p>
+      <button (click)="cancelarMembresia()">Cancelar Membresía</button>
+    </div>
   </div>
 </div>
 
