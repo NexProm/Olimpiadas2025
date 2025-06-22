@@ -4,7 +4,7 @@
     <h1>Tu próximo destino<br>te espera.</h1>
   </div>
 </div>
-
+<br><br>
 <div class="forms">
 <form action="/buscar-paquetes" method="get">
   <h2>Elige nuestros paquetes turísticos:</h2>
@@ -55,3 +55,34 @@
 </form>
 
 </div>
+<br><br>
+<div class="contenedor">
+  <img src="images/Banner1.png" alt="Imagen 1">
+  <img src="images/Banner2.png" alt="Imagen 2">
+  <img src="images/Banner3.png" alt="Imagen 3">
+  <img src="images/Banner4.png" alt="Imagen 4">
+</div>
+<br><br>
+<h2>Los paquetes turísticos más destacados:</h2>
+<section class="carroza">
+  <button class="flecha izquierda" (click)="sliderscroll(-1)">←</button>
+  <div class="slider">
+      <div class="carrusel">
+          <div class="imagenes" *ngFor="let pack of paquetes">
+              <img [src]="pack.img" [alt]="pack.titulo">
+              <strong>{{ pack.titulo }}</strong>
+              <p *ngFor="let desc of pack.descripcion">{{ desc }}</p>
+              <p>Precio final por persona</p>
+              <strong>{{ pack.precio }}</strong>
+              <div class="estrellas">
+                  <span *ngFor="let rate of [1, 2, 3, 4, 5]"
+                      (click)="calificacionpaquete(pack, rate)">
+                      {{ rate <= pack.calificacion ? '★' : '☆' }}
+                  </span>
+              </div>
+              <button (click)="addCart(pack)">Comprar</button>
+          </div>
+      </div>
+  </div>
+  <button class="flecha derecha" (click)="sliderscroll(+1)">→</button>
+</section>

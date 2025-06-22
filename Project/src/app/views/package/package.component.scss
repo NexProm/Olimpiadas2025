@@ -3,9 +3,78 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 .body {
   margin-left: 20px;
   margin-top: 15px;
+h2{
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+section h1{
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+.container1{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 70px;
+  margin-bottom: 30px;
+  img{
+    width: 30%;
+      height: 60vh;
+      border-radius: 8px;
+      display: block;
+  }
+}
+.container2{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 70px;
+  margin-bottom: 30px;
+  img{
+    width: 30%;
+      height: 60vh;
+      border-radius: 8px;
+      display: block;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 75px;
+
+  .paquete {
+    position: relative;
+    width: 20%;
+
+    img {
+      margin-top: 25px;
+      width: 100%;
+      height: 175px;
+      object-fit: cover;
+      border-radius: 8px;
+      display: block;
+    
+    }
+    strong{
+     position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-size: 1rem;
+      font-weight: bold;
+      text-shadow: 0 2px 2px rgba(3, 0, 0, 0.6); 
+   }
+  }
+
 }
 .carroza{
     display: flex;
@@ -35,6 +104,7 @@
 }
 h1{
   margin-left: 20px;
+  margin-bottom: 10px;
 }
 .carroza h1 p{
     display: flex;
@@ -119,12 +189,15 @@ h1{
 p{
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 3;
+    font-size: small;
     font-style: normal;
     margin-left: 17px;
+    color: rgb(67, 66, 66);
 }
 strong{
   font-size: large;
+  font-family: "Montserrat", sans-serif;
+  color: black;
 }
 @media (max-width: 1024px) {
   .imagenes {
@@ -182,3 +255,4 @@ strong{
   }
 }
 
+}
