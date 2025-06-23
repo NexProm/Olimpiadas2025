@@ -15,7 +15,7 @@ export class ClienteService {
   constructor(private http: HttpClient) { }
 
   registrarCliente(data: RegisterRequest): Observable<string> {
-      return this.http.post('http://localhost:8080/api/registrar', data, {
+      return this.http.post('https://conexionbd-production-e8c2.up.railway.app/api/registrar', data, {
       responseType: 'text'
     });
   }

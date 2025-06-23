@@ -8,16 +8,16 @@ import { PedidoPendiente } from '../models/pedido-pendiente.model';
   providedIn: 'root'
 })
 export class PedidosService {
-  private url = 'http://localhost:8080/api/pedido'
+  private url = 'https://conexionbd-production-e8c2.up.railway.app/api/pedido'
   constructor(private http: HttpClient) { }
   enviarPedido(pedido: Pedido): Observable<any> {
     console.log('Pedido que se envía:', pedido);
     return this.http.post(this.url, pedido);
   }
   actualizarEstadoPedido(id: number, estado: string): Observable<any> {
-    return this.http.put(`http://localhost:8080/api/pedido/${id}/estado`, { estado });
+    return this.http.put('https://conexionbd-production-e8c2.up.railway.app/api/pedido/${id}/estado, { estado }');
   }
   mostrarPedidosPendientes(): Observable<PedidoPendiente[]> {
-    return this.http.get<PedidoPendiente[]>('http://localhost:8080/api/pedido/pendientes');
+    return this.http.get<PedidoPendiente[]>('https://conexionbd-production-e8c2.up.railway.app/api/pedido/pendientes');
   }
 }

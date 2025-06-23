@@ -1,4 +1,3 @@
-
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -19,7 +18,7 @@ export interface LoginResponse{
   providedIn: 'root'
 })
 export class LoginService {
-  private url = 'http://localhost:8080/api/login'
+  private url = 'https://conexionbd-production-e8c2.up.railway.app/api/login'
   constructor(private http: HttpClient) { }
 
   login(data: LoginRequest): Observable <LoginResponse>{
