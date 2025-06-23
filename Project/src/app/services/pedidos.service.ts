@@ -15,7 +15,7 @@ export class PedidosService {
     return this.http.post(this.url, pedido);
   }
   actualizarEstadoPedido(id: number, estado: string): Observable<any> {
-    return this.http.put('https://conexionbd-production-e8c2.up.railway.app/api/pedido/${id}/estado, { estado }');
+    return this.http.put(`https://conexionbd-production-e8c2.up.railway.app/api/pedido/${id}/estado`, { estado });
   }
   mostrarPedidosPendientes(): Observable<PedidoPendiente[]> {
     return this.http.get<PedidoPendiente[]>('https://conexionbd-production-e8c2.up.railway.app/api/pedido/pendientes');
