@@ -14,19 +14,19 @@ export class PackageComponent {
 
   buscados = [
     {
-      img: '/images/Playabrasil.jpg',
+      img: 'images/Playabrasil.jpg',
       des: 'BRASIL'
     },
      {
-      img: '/images/Caribeplaya.jpg',
+      img: 'images/Caribeplaya.jpg',
       des: 'CARIBE'
     },
      {
-      img: '/images/Mexicoplaya.jpg',
+      img: 'images/Mexicoplaya.jpg',
       des: 'MÉXICO'
     },
      {
-      img: '/images/Filipinasplaya.jpg',
+      img: 'images/Filipinasplaya.jpg',
       des: 'FILIPINAS'
    }
   ]
