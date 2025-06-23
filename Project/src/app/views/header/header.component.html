@@ -2,15 +2,15 @@
   <div class="barra">
     <img class="logo" src="images/logo.png">
     <ul class="menu">
-      <li><a href="#">Home</a></li>
-      <li><a href="/package">Paquetes</a></li>
-      <li><a href="/carrito">Carrito</a></li>
-      <li><a href="/about">Acerca de</a></li>
+      <li><a routerLink="#">Home</a></li>
+      <li><a routerLink="/package">Paquetes</a></li>
+      <li><a routerLink="/carrito">Carrito</a></li>
+      <li><a routerLink="/about">Acerca de</a></li>
       <li *ngIf="!usuario">
         <a routerLink="/inicio-sesion">Ingresar</a>
       </li>
       <li *ngIf="usuario?.rol === 'jefe'">
-        <a href="/jefes">Jefes</a>
+        <a routerLink="/jefes">Jefes</a>
       </li>
       <li *ngIf="usuario" class="perfil">
         <a routerLink="/perfil">
@@ -26,12 +26,12 @@
   </div>
   <div class="menu-servicios">
     <ul class="servicios">
-      <li><a href="/alojamientos">Alojamientos</a></li>
-      <li><a href="/vuelos">Vuelos</a></li>
-      <li><a href="/alquileres">Alquileres</a></li>
-      <li><a href="/autos">Autos</a></li>
-      <li><a href="/asistencia">Asistencia</a></li>
-      <li><a href="/micros">Micros</a></li>
+      <li><a routerLink="/alojamientos">Alojamientos</a></li>
+      <li><a routerLink="/vuelos">Vuelos</a></li>
+      <li><a routerLink="/alquileres">Alquileres</a></li>
+      <li><a routerLink="/autos">Autos</a></li>
+      <li><a routerLink="/asistencia">Asistencia</a></li>
+      <li><a routerLink="/micros">Micros</a></li>
     </ul>
   </div>
 </div>
