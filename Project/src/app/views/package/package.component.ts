@@ -14,21 +14,21 @@ export class PackageComponent {
 
   buscados = [
     {
-      img: '/images/Playabrasil.jpg',
+      img: 'images/Playabrasil.jpg',
       des: 'BRASIL'
     },
      {
-      img: '/images/Caribeplaya.jpg',
+      img: 'images/Caribeplaya.jpg',
       des: 'CARIBE'
     },
      {
-      img: '/images/Mexicoplaya.jpg',
+      img: 'images/Mexicoplaya.jpg',
       des: 'MÉXICO'
     },
-     {
-      img: '/images/Filipinasplaya.jpg',
+    {
+      img: 'images/Filipinasplaya.jpg',
       des: 'FILIPINAS'
-   }
+    }
   ]
 
   paquetes: {
@@ -38,64 +38,7 @@ export class PackageComponent {
     descripcion: string[];
     precio: string;
     calificacion: number;
-  } []= [
-    {
-    id:1,
-    img: '/images/Brasil.jpg',
-    titulo: 'Paquetes a Rio de Janeiro',
-    descripcion: ['Saliendo desde Buenos Aires', 'Hotel + Vuelo'],
-    precio: '$712.342',
-    calificacion: 0
-    },
-    {
-    id:2,
-    img: '/images/holanda.jpg',
-    titulo: 'Paquetes a Amsterdam',
-    descripcion: ['Saliendo desde Buenos Aires', 'Hotel + Vuelo'],
-    precio: '$912.342',
-    calificacion: 0
-    },
-    {
-    id:3,
-    img: '/images/nyc.jpg',
-    titulo: 'Paquetes a Nueva York',
-    descripcion: ['Saliendo desde Buenos Aires', 'Hotel + Vuelo'],
-    precio: '$854.198',
-    calificacion: 0
-    },
-    {
-    id:4,
-    img: '/images/venecia.jpg',
-    titulo: 'Paquetes a Venecia',
-    descripcion: ['Saliendo desde Buenos Aires', 'Hotel + Vuelo'],
-    precio: '$867.204',
-    calificacion: 0
-    },
-    {
-    id :5,
-    img: '/images/paris.jpg',
-    titulo: 'Paquetes a Paris',
-    descripcion: ['Saliendo desde Buenos Aires', 'Hotel + Vuelo'],
-    precio: '$947,531',
-    calificacion: 0
-    },
-    {
-    id:6,
-    img: '/images/santiago.jpg',
-    titulo: 'Paquetes a Santiago de Chile',
-    descripcion: ['Saliendo desde Buenos Aires', 'Hotel + Vuelo'],
-    precio: '$653,402',
-    calificacion: 0
-    },
-    {
-    id:7,
-    img: '/images/estambul.jpg',
-    titulo: 'Paquetes a Estambul',
-    descripcion: ['Saliendo desde Buenos Aires', 'Hotel + Vuelo'],
-    precio: '$986,971',
-    calificacion: 0
-    }
-  ]
+  } []= []
   calificacionpaquete(pack: any, rate: number){
     pack.calificacion = rate;
   }
@@ -121,7 +64,7 @@ export class PackageComponent {
   }
 
   asignarImagen(): string {
-    return '/images/avion.jpg';
+    return 'images/avion.jpg';
   }
    ngOnInit(): void {
   this.agregarProductosService.listarProductos().subscribe({
