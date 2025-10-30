@@ -10,7 +10,7 @@ import { PedidoPendiente } from '../models/pedido-pendiente.model';
   providedIn: 'root'
 })
 export class AgregarProductosService {
-  private url = 'https://conexionbd-production-e8c2.up.railway.app/api/productos';
+  private url = 'http://localhost:8080/api/productos';
 
   constructor(private http: HttpClient) {}
 

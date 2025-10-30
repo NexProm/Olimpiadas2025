@@ -8,6 +8,7 @@ import { CommonModule } from '@angular/common';
 import { RegisterRequest } from '../../services/cliente.service';
 @Component({
   selector: 'app-registro',
+  standalone: true,
   imports: [CommonModule, ReactiveFormsModule, RouterModule],
   templateUrl: './registro.component.html',
   styleUrl: './registro.component.scss'

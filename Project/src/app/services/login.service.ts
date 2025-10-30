@@ -18,7 +18,7 @@ export interface LoginResponse{
   providedIn: 'root'
 })
 export class LoginService {
-  private url = 'https://conexionbd-production-e8c2.up.railway.app/api/login'
+  private url = 'http://localhost:8080/api/login'
   constructor(private http: HttpClient) { }
 
   login(data: LoginRequest): Observable <LoginResponse>{
