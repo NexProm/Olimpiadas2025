@@ -1,0 +1,6 @@
+services: 
+  angular:
+    build: 
+      dockerfile: Project/Dockerfile
+    ports:
+      - "4200:80"
