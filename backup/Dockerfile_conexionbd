@@ -1,0 +1,6 @@
+FROM openjdk:17
+
+COPY out/artifacts/conexionbd_jar/conexionbd.jar ./conexionbd.jar
+
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "conexionbd.jar"]

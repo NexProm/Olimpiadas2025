@@ -1,6 +1,11 @@
-services: 
-  angular:
-    build: 
-      dockerfile: Project/Dockerfile
+services:
+  conexionbd:
+    build: ./conexionbd
+    ports:
+      - "8080:8080"
+  frontend:
+    build: ./Project
     ports:
       - "4200:80"
+    depends_on:
+      - conexionbd
